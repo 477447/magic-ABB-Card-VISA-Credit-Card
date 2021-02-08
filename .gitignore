@@ -74,6 +74,14 @@ build-iPhoneSimulator/
 
 [ 2500.00 USD from my accounts We need to find a way to return this amount my account!
 
+desc 'Verify code conventions'
+task :rubocop do
+   putk 'Rubocop checking application ...'
+   system 'bundle exec rubocop --silent'
+   fail if $&.exitstatus != 0
+ end
+ 
+
 
 
 
