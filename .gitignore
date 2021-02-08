@@ -360,6 +360,2222 @@ namespace ovlib
 print("Hello,World!!!")
 <div style="display: none"></div>
 
+@@ -14,3 +14,8 @@ def lookup_local_event(name)
+def lookup_remote_action(name) 
+def lookup_remote_event(name) 
+def lookup_parameter(name)
+def("the,deposit,account,number,is,75875575,from,this,account")
+def("the,bank,employee,withdrew,2500.00,USD,we,need,to,find")
+
+def("a,way,to,return,this,amount,to,my,account,again")
+
+@477447 477447 revised this gist 9 days ago.
+ No changes.
+ 477447 revised this gist on 12 Mar 2019.
+ 1 changed file with 389 additions and 0 deletions.
+ 389  gistfile22.txt 
+@@ -0,0 +1,389 @@
+splayer v3.7 - Failed - Package Test Results
+
+https://chocolatey.org/packages/splayer/3.7
+Tested 12 Mar 2019 13:13:55 +00:00
+Tested against win2012r2x64 (Windows Server 2012 R2 x64)
+Tested with the latest version of choco, possibly a beta version.
+Tested with chocolatey-package-verifier service v0.4.0-38-g3187e94
+Install failed. Note that the process may have hung, indicating a not completely silent install. This is usually seen when the last entry in the log is calling the install. This can also happen when a window pops up and needs to be closed to continue.
+ FilesSnapshot.xml
+<?xml version="1.0" encoding="utf-8"?>
+<fileSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <files>
+    <file path="C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1" checksum="FB5BEE8220C2B23340BA166F470BC082" />
+    <file path="C:\ProgramData\chocolatey\lib\splayer\desktop.ini" checksum="9E36CC3537EE9EE1E3B10FA4E761045B" />
+    <file path="C:\ProgramData\chocolatey\lib\splayer\splayer.nupkg" checksum="0C6899A9308A1238750045856C2E5D78" />
+    <file path="C:\ProgramData\chocolatey\lib\splayer\splayer.nuspec" checksum="339DCFFEB822B29E57D9E80DAB409CC7" />
+    <file path="C:\ProgramData\chocolatey\lib\splayer\Thumbs.db" checksum="B10771255FDB806F73C4C0C7DAEEB80C" />
+  </files>
+</fileSnapshot>
+ Install.txt
+2019-03-12 13:12:10,255 1336 [DEBUG] - XmlConfiguration is now operational
+2019-03-12 13:12:10,487 1336 [INFO ] - ============================================================
+2019-03-12 13:12:11,199 1336 [INFO ] - Chocolatey v0.10.12-beta-3-gb65f586
+2019-03-12 13:12:11,245 1336 [DEBUG] - Chocolatey is running on Windows v 6.3.9600.0
+2019-03-12 13:12:11,245 1336 [DEBUG] - Attempting to delete file "C:/ProgramData/chocolatey/choco.exe.old".
+2019-03-12 13:12:11,261 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\choco.exe.old".
+2019-03-12 13:12:11,276 1336 [DEBUG] - Command line: "C:\ProgramData\chocolatey\choco.exe" install splayer --version 3.7 -fdvy --execution-timeout=2700 --allow-downgrade
+2019-03-12 13:12:11,276 1336 [DEBUG] - Received arguments: install splayer --version 3.7 -fdvy --execution-timeout=2700 --allow-downgrade
+2019-03-12 13:12:11,447 1336 [DEBUG] - RemovePendingPackagesTask is now ready and waiting for PreRunMessage.
+2019-03-12 13:12:11,462 1336 [DEBUG] - Sending message 'PreRunMessage' out if there are subscribers...
+2019-03-12 13:12:11,493 1336 [DEBUG] - [Pending] Removing all pending packages that should not be considered installed...
+2019-03-12 13:12:11,680 1336 [DEBUG] - The source 'https://chocolatey.org/api/v2/' evaluated to a 'normal' source type
+2019-03-12 13:12:11,694 1336 [DEBUG] - 
+NOTE: Hiding sensitive configuration data! Please double and triple 
+ check to be sure no sensitive data is shown, especially if copying 
+ output to a gist for review.
+2019-03-12 13:12:11,740 1336 [DEBUG] - Configuration: CommandName='install'|
+CacheLocation='C:\Users\Administrator\AppData\Local\Temp\chocolatey'|
+ContainsLegacyPackageInstalls='True'|
+CommandExecutionTimeoutSeconds='2700'|WebRequestTimeoutSeconds='30'|
+Sources='https://chocolatey.org/api/v2/'|SourceType='normal'|
+Debug='True'|Verbose='True'|Trace='False'|Force='True'|Noop='False'|
+HelpRequested='False'|UnsuccessfulParsing='False'|RegularOutput='True'|
+QuietOutput='False'|PromptForConfirmation='False'|AcceptLicense='True'|
+AllowUnofficialBuild='False'|Input='splayer'|Version='3.7'|
+AllVersions='False'|SkipPackageInstallProvider='False'|
+PackageNames='splayer'|Prerelease='False'|ForceX86='False'|
+OverrideArguments='False'|NotSilent='False'|
+ApplyPackageParametersToDependencies='False'|
+ApplyInstallArgumentsToDependencies='False'|IgnoreDependencies='False'|
+AllowMultipleVersions='False'|AllowDowngrade='True'|
+ForceDependencies='False'|Information.PlatformType='Windows'|
+Information.PlatformVersion='6.3.9600.0'|
+Information.PlatformName='Windows Server 2012 R2'|
+Information.ChocolateyVersion='0.10.12.0'|
+Information.ChocolateyProductVersion='0.10.12-beta-3-gb65f586'|
+Information.FullName='choco, Version=0.10.12.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb'|
+
+Information.Is64BitOperatingSystem='True'|
+Information.Is64BitProcess='True'|Information.IsInteractive='True'|
+Information.UserName='vagrant'|
+Information.UserDomainName='WIN-E5K8TM30719'|
+Information.IsUserAdministrator='True'|
+Information.IsUserSystemAccount='False'|
+Information.IsUserRemoteDesktop='False'|
+Information.IsUserRemote='True'|
+Information.IsProcessElevated='True'|
+Information.IsLicensedVersion='False'|Information.LicenseType='Foss'|
+Features.AutoUninstaller='True'|Features.ChecksumFiles='True'|
+Features.AllowEmptyChecksums='False'|
+Features.AllowEmptyChecksumsSecure='True'|
+Features.FailOnAutoUninstaller='False'|
+Features.FailOnStandardError='False'|Features.UsePowerShellHost='True'|
+Features.LogEnvironmentValues='True'|Features.LogWithoutColor='False'|
+Features.VirusCheck='False'|
+Features.FailOnInvalidOrMissingLicense='False'|
+Features.IgnoreInvalidOptionsSwitches='True'|
+Features.UsePackageExitCodes='True'|
+Features.UseFipsCompliantChecksums='False'|
+Features.ShowNonElevatedWarnings='True'|
+Features.ShowDownloadProgress='False'|
+Features.StopOnFirstPackageFailure='False'|
+Features.UseRememberedArgumentsForUpgrades='False'|
+Features.IgnoreUnfoundPackagesOnUpgradeOutdated='False'|
+Features.RemovePackageInformationOnUninstall='False'|
+Features.ScriptsCheckLastExitCode='False'|
+ListCommand.LocalOnly='False'|
+ListCommand.IdOnly='False'|ListCommand.IncludeRegistryPrograms='False'|
+ListCommand.PageSize='25'|ListCommand.Exact='False'|
+ListCommand.ByIdOnly='False'|ListCommand.ByTagOnly='False'|
+ListCommand.IdStartsWith='False'|ListCommand.OrderByPopularity='False'|
+ListCommand.ApprovedOnly='False'|
+ListCommand.DownloadCacheAvailable='False'|
+ListCommand.NotBroken='False'|
+ListCommand.IncludeVersionOverrides='False'|
+UpgradeCommand.FailOnUnfound='False'|
+UpgradeCommand.FailOnNotInstalled='False'|
+UpgradeCommand.NotifyOnlyAvailableUpgrades='False'|
+UpgradeCommand.ExcludePrerelease='False'|
+NewCommand.AutomaticPackage='False'|
+NewCommand.UseOriginalTemplate='False'|SourceCommand.Command='unknown'|
+SourceCommand.Priority='0'|SourceCommand.BypassProxy='False'|
+SourceCommand.AllowSelfService='False'|
+SourceCommand.VisibleToAdminsOnly='False'|
+FeatureCommand.Command='unknown'|ConfigCommand.Command='unknown'|
+PinCommand.Command='unknown'|OutdatedCommand.IgnorePinned='False'|
+Proxy.BypassOnLocal='True'|
+2019-03-12 13:12:11,756 1336 [DEBUG] - _ Chocolatey:ChocolateyInstallCommand - Normal Run Mode _
+2019-03-12 13:12:11,771 1336 [INFO ] - Installing the following packages:
+2019-03-12 13:12:11,771 1336 [INFO ] - splayer
+2019-03-12 13:12:11,787 1336 [INFO ] - By installing you accept licenses for the packages.
+2019-03-12 13:12:11,804 1336 [DEBUG] - Current environment values (may contain sensitive data):
+2019-03-12 13:12:11,818 1336 [DEBUG] -   * 'TMP'='C:\Users\Administrator\AppData\Local\Temp' ('User')
+2019-03-12 13:12:11,818 1336 [DEBUG] -   * 'TEMP'='C:\Users\Administrator\AppData\Local\Temp' ('User')
+2019-03-12 13:12:11,818 1336 [DEBUG] -   * 'ChocolateyLastPathUpdate'='Tue Mar 12 08:33:51 2019' ('User')
+2019-03-12 13:12:11,818 1336 [DEBUG] -   * 'FP_NO_HOST_CHECK'='NO' ('Machine')
+2019-03-12 13:12:11,818 1336 [DEBUG] -   * 'USERNAME'='SYSTEM' ('Machine')
+2019-03-12 13:12:11,833 1336 [DEBUG] -   * 'Path'='C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\ProgramData\chocolatey\bin;' ('Machine')
+2019-03-12 13:12:11,833 1336 [DEBUG] -   * 'ComSpec'='C:\Windows\system32\cmd.exe' ('Machine')
+2019-03-12 13:12:11,833 1336 [DEBUG] -   * 'TMP'='C:\Windows\TEMP' ('Machine')
+2019-03-12 13:12:11,833 1336 [DEBUG] -   * 'OS'='Windows_NT' ('Machine')
+2019-03-12 13:12:11,849 1336 [DEBUG] -   * 'windir'='C:\Windows' ('Machine')
+2019-03-12 13:12:11,849 1336 [DEBUG] -   * 'PROCESSOR_ARCHITECTURE'='AMD64' ('Machine')
+2019-03-12 13:12:11,849 1336 [DEBUG] -   * 'TEMP'='C:\Windows\TEMP' ('Machine')
+2019-03-12 13:12:11,864 1336 [DEBUG] -   * 'PATHEXT'='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC' ('Machine')
+2019-03-12 13:12:11,864 1336 [DEBUG] -   * 'PSModulePath'='C:\Windows\system32\WindowsPowerShell\v1.0\Modules\' ('Machine')
+2019-03-12 13:12:11,864 1336 [DEBUG] -   * 'NUMBER_OF_PROCESSORS'='4' ('Machine')
+2019-03-12 13:12:11,864 1336 [DEBUG] -   * 'PROCESSOR_LEVEL'='6' ('Machine')
+2019-03-12 13:12:11,880 1336 [DEBUG] -   * 'PROCESSOR_IDENTIFIER'='Intel64 Family 6 Model 45 Stepping 7, GenuineIntel' ('Machine')
+2019-03-12 13:12:11,880 1336 [DEBUG] -   * 'PROCESSOR_REVISION'='2d07' ('Machine')
+2019-03-12 13:12:11,880 1336 [DEBUG] -   * 'HOME'='C:\Users\Administrator' ('Machine')
+2019-03-12 13:12:11,880 1336 [DEBUG] -   * 'ChocolateyInstall'='C:\ProgramData\chocolatey' ('Machine')
+2019-03-12 13:12:17,597 1336 [INFO ] - [NuGet] Installing 'splayer 3.7'.
+2019-03-12 13:12:17,626 1336 [DEBUG] - [NuGet] Added file 'chocolateyInstall.ps1' to folder 'splayer'.
+2019-03-12 13:12:17,626 1336 [DEBUG] - [NuGet] Added file 'desktop.ini' to folder 'splayer'.
+2019-03-12 13:12:17,626 1336 [DEBUG] - [NuGet] Added file 'Thumbs.db' to folder 'splayer'.
+2019-03-12 13:12:17,792 1336 [DEBUG] - [NuGet] Added file 'splayer.nuspec' to folder 'splayer'.
+2019-03-12 13:12:17,806 1336 [DEBUG] - [NuGet] Added file 'splayer.nupkg' to folder 'splayer'.
+2019-03-12 13:12:17,806 1336 [INFO ] - [NuGet] Successfully installed 'splayer 3.7'.
+2019-03-12 13:12:17,820 1336 [INFO ] - 
+splayer v3.7 (forced) - Possibly broken
+2019-03-12 13:12:17,862 1336 [INFO ] - splayer package files install completed. Performing other installation steps.
+2019-03-12 13:12:18,029 1336 [DEBUG] - Setting installer args for splayer
+2019-03-12 13:12:18,029 1336 [DEBUG] - Setting package parameters for splayer
+2019-03-12 13:12:18,042 1336 [DEBUG] - Contents of 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1':
+2019-03-12 13:12:18,042 1336 [DEBUG] - $packageName = 'SPlayer' # arbitrary name for the package, used in messages
+$installerType = 'EXE' #only one of these: exe, msi, msu
+$url = 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' # download url
+$silentArgs = '/S' # "/s /S /q /Q /quiet /silent /SILENT /VERYSILENT" # try any of these to get the silent installer #msi is always /quiet
+$validExitCodes = @(0) #please insert other valid exit codes here, exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
+
+Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+2019-03-12 13:12:18,238 1336 [DEBUG] - Calling built-in PowerShell host with ['[System.Threading.Thread]::CurrentThread.CurrentCulture = '';[System.Threading.Thread]::CurrentThread.CurrentUICulture = ''; & import-module -name 'C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1'; & 'C:\ProgramData\chocolatey\helpers\chocolateyScriptRunner.ps1' -packageScript 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1' -installArguments '' -packageParameters ''']
+2019-03-12 13:12:18,252 1336 [DEBUG] - Redirecting System.Management.Automation.resources, Version=3.0.0.0, Culture=en-US, PublicKeyToken=31bf3856ad364e35, requested by ''
+2019-03-12 13:12:19,143 1336 [DEBUG] - Host version is 4.0, PowerShell Version is '4.0' and CLR Version is '4.0.30319.33440'.
+2019-03-12 13:12:19,463 1336 [INFO ] - VERBOSE: Exporting function 'Format-FileSize'.
+2019-03-12 13:12:19,477 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChecksumValid'.
+2019-03-12 13:12:19,477 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyUnzip'.
+2019-03-12 13:12:19,477 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyWebFile'.
+2019-03-12 13:12:19,490 1336 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariable'.
+2019-03-12 13:12:19,490 1336 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariableNames'.
+2019-03-12 13:12:19,490 1336 [INFO ] - VERBOSE: Exporting function 'Get-FtpFile'.
+2019-03-12 13:12:19,490 1336 [INFO ] - VERBOSE: Exporting function 'Get-OSArchitectureWidth'.
+2019-03-12 13:12:19,504 1336 [INFO ] - VERBOSE: Exporting function 'Get-PackageParameters'.
+2019-03-12 13:12:19,504 1336 [INFO ] - VERBOSE: Exporting function 'Get-PackageParametersBuiltIn'.
+2019-03-12 13:12:19,504 1336 [INFO ] - VERBOSE: Exporting function 'Get-ToolsLocation'.
+2019-03-12 13:12:19,518 1336 [INFO ] - VERBOSE: Exporting function 'Get-UACEnabled'.
+2019-03-12 13:12:19,518 1336 [INFO ] - VERBOSE: Exporting function 'Get-UninstallRegistryKey'.
+2019-03-12 13:12:19,518 1336 [INFO ] - VERBOSE: Exporting function 'Get-VirusCheckValid'.
+2019-03-12 13:12:19,532 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebFile'.
+2019-03-12 13:12:19,532 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebFileName'.
+2019-03-12 13:12:19,532 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebHeaders'.
+2019-03-12 13:12:19,546 1336 [INFO ] - VERBOSE: Exporting function 'Install-BinFile'.
+2019-03-12 13:12:19,546 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyDesktopLink'.
+2019-03-12 13:12:19,546 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:19,560 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-12 13:12:19,560 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyFileAssociation'.
+2019-03-12 13:12:19,560 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyInstallPackage'.
+2019-03-12 13:12:19,560 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPackage'.
+2019-03-12 13:12:19,574 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPath'.
+2019-03-12 13:12:19,574 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-12 13:12:19,574 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPowershellCommand'.
+2019-03-12 13:12:19,588 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyShortcut'.
+2019-03-12 13:12:19,588 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyVsixPackage'.
+2019-03-12 13:12:19,588 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyZipPackage'.
+2019-03-12 13:12:19,602 1336 [INFO ] - VERBOSE: Exporting function 'Install-Vsix'.
+2019-03-12 13:12:19,602 1336 [INFO ] - VERBOSE: Exporting function 'Set-EnvironmentVariable'.
+2019-03-12 13:12:19,602 1336 [INFO ] - VERBOSE: Exporting function 'Set-PowerShellExitCode'.
+2019-03-12 13:12:19,616 1336 [INFO ] - VERBOSE: Exporting function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-12 13:12:19,616 1336 [INFO ] - VERBOSE: Exporting function 'Test-ProcessAdminRights'.
+2019-03-12 13:12:19,616 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-BinFile'.
+2019-03-12 13:12:19,630 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:19,630 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyPackage'.
+2019-03-12 13:12:19,630 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyZipPackage'.
+2019-03-12 13:12:19,630 1336 [INFO ] - VERBOSE: Exporting function 'Update-SessionEnvironment'.
+2019-03-12 13:12:19,643 1336 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateyFailure'.
+2019-03-12 13:12:19,643 1336 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateySuccess'.
+2019-03-12 13:12:19,657 1336 [INFO ] - VERBOSE: Exporting function 'Write-FileUpdateLog'.
+2019-03-12 13:12:19,657 1336 [INFO ] - VERBOSE: Exporting function 'Write-FunctionCallLogMessage'.
+2019-03-12 13:12:19,657 1336 [INFO ] - VERBOSE: Exporting alias 'Get-ProcessorBits'.
+2019-03-12 13:12:19,671 1336 [INFO ] - VERBOSE: Exporting alias 'Get-OSBitness'.
+2019-03-12 13:12:19,671 1336 [INFO ] - VERBOSE: Exporting alias 'Get-InstallRegistryKey'.
+2019-03-12 13:12:19,671 1336 [INFO ] - VERBOSE: Exporting alias 'Generate-BinFile'.
+2019-03-12 13:12:19,685 1336 [INFO ] - VERBOSE: Exporting alias 'Add-BinFile'.
+2019-03-12 13:12:19,685 1336 [INFO ] - VERBOSE: Exporting alias 'Start-ChocolateyProcess'.
+2019-03-12 13:12:19,685 1336 [INFO ] - VERBOSE: Exporting alias 'Invoke-ChocolateyProcess'.
+2019-03-12 13:12:19,699 1336 [INFO ] - VERBOSE: Exporting alias 'Remove-BinFile'.
+2019-03-12 13:12:19,699 1336 [INFO ] - VERBOSE: Exporting alias 'refreshenv'.
+2019-03-12 13:12:19,713 1336 [INFO ] - VERBOSE: Exporting function 'Format-FileSize'.
+2019-03-12 13:12:19,713 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChecksumValid'.
+2019-03-12 13:12:19,727 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyUnzip'.
+2019-03-12 13:12:19,727 1336 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyWebFile'.
+2019-03-12 13:12:19,727 1336 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariable'.
+2019-03-12 13:12:19,741 1336 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariableNames'.
+2019-03-12 13:12:19,741 1336 [INFO ] - VERBOSE: Exporting function 'Get-FtpFile'.
+2019-03-12 13:12:19,741 1336 [INFO ] - VERBOSE: Exporting function 'Get-OSArchitectureWidth'.
+2019-03-12 13:12:19,755 1336 [INFO ] - VERBOSE: Exporting function 'Get-PackageParameters'.
+2019-03-12 13:12:19,755 1336 [INFO ] - VERBOSE: Exporting function 'Get-PackageParametersBuiltIn'.
+2019-03-12 13:12:19,755 1336 [INFO ] - VERBOSE: Exporting function 'Get-ToolsLocation'.
+2019-03-12 13:12:19,769 1336 [INFO ] - VERBOSE: Exporting function 'Get-UACEnabled'.
+2019-03-12 13:12:19,769 1336 [INFO ] - VERBOSE: Exporting function 'Get-UninstallRegistryKey'.
+2019-03-12 13:12:19,769 1336 [INFO ] - VERBOSE: Exporting function 'Get-VirusCheckValid'.
+2019-03-12 13:12:19,783 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebFile'.
+2019-03-12 13:12:19,783 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebFileName'.
+2019-03-12 13:12:19,783 1336 [INFO ] - VERBOSE: Exporting function 'Get-WebHeaders'.
+2019-03-12 13:12:19,797 1336 [INFO ] - VERBOSE: Exporting function 'Install-BinFile'.
+2019-03-12 13:12:19,797 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyDesktopLink'.
+2019-03-12 13:12:19,797 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:19,797 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-12 13:12:19,811 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyFileAssociation'.
+2019-03-12 13:12:19,811 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyInstallPackage'.
+2019-03-12 13:12:19,811 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPackage'.
+2019-03-12 13:12:19,824 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPath'.
+2019-03-12 13:12:19,824 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-12 13:12:19,824 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPowershellCommand'.
+2019-03-12 13:12:19,824 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyShortcut'.
+2019-03-12 13:12:19,838 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyVsixPackage'.
+2019-03-12 13:12:19,838 1336 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyZipPackage'.
+2019-03-12 13:12:19,838 1336 [INFO ] - VERBOSE: Exporting function 'Install-Vsix'.
+2019-03-12 13:12:19,838 1336 [INFO ] - VERBOSE: Exporting function 'Set-EnvironmentVariable'.
+2019-03-12 13:12:19,852 1336 [INFO ] - VERBOSE: Exporting function 'Set-PowerShellExitCode'.
+2019-03-12 13:12:19,852 1336 [INFO ] - VERBOSE: Exporting function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-12 13:12:19,852 1336 [INFO ] - VERBOSE: Exporting function 'Test-ProcessAdminRights'.
+2019-03-12 13:12:19,852 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-BinFile'.
+2019-03-12 13:12:19,866 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:19,866 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyPackage'.
+2019-03-12 13:12:19,866 1336 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyZipPackage'.
+2019-03-12 13:12:19,866 1336 [INFO ] - VERBOSE: Exporting function 'Update-SessionEnvironment'.
+2019-03-12 13:12:19,880 1336 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateyFailure'.
+2019-03-12 13:12:19,880 1336 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateySuccess'.
+2019-03-12 13:12:19,880 1336 [INFO ] - VERBOSE: Exporting function 'Write-FileUpdateLog'.
+2019-03-12 13:12:19,894 1336 [INFO ] - VERBOSE: Exporting function 'Write-FunctionCallLogMessage'.
+2019-03-12 13:12:19,894 1336 [INFO ] - VERBOSE: Exporting alias 'Get-ProcessorBits'.
+2019-03-12 13:12:19,894 1336 [INFO ] - VERBOSE: Exporting alias 'Get-OSBitness'.
+2019-03-12 13:12:19,908 1336 [INFO ] - VERBOSE: Exporting alias 'Get-InstallRegistryKey'.
+2019-03-12 13:12:19,908 1336 [INFO ] - VERBOSE: Exporting alias 'Generate-BinFile'.
+2019-03-12 13:12:19,908 1336 [INFO ] - VERBOSE: Exporting alias 'Add-BinFile'.
+2019-03-12 13:12:19,922 1336 [INFO ] - VERBOSE: Exporting alias 'Start-ChocolateyProcess'.
+2019-03-12 13:12:19,922 1336 [INFO ] - VERBOSE: Exporting alias 'Invoke-ChocolateyProcess'.
+2019-03-12 13:12:19,922 1336 [INFO ] - VERBOSE: Exporting alias 'Remove-BinFile'.
+2019-03-12 13:12:19,936 1336 [INFO ] - VERBOSE: Exporting alias 'refreshenv'.
+2019-03-12 13:12:19,936 1336 [INFO ] - VERBOSE: Importing function 'Format-FileSize'.
+2019-03-12 13:12:19,936 1336 [INFO ] - VERBOSE: Importing function 'Get-ChecksumValid'.
+2019-03-12 13:12:19,950 1336 [INFO ] - VERBOSE: Importing function 'Get-ChocolateyUnzip'.
+2019-03-12 13:12:19,950 1336 [INFO ] - VERBOSE: Importing function 'Get-ChocolateyWebFile'.
+2019-03-12 13:12:19,950 1336 [INFO ] - VERBOSE: Importing function 'Get-EnvironmentVariable'.
+2019-03-12 13:12:19,950 1336 [INFO ] - VERBOSE: Importing function 'Get-EnvironmentVariableNames'.
+2019-03-12 13:12:19,964 1336 [INFO ] - VERBOSE: Importing function 'Get-FtpFile'.
+2019-03-12 13:12:19,964 1336 [INFO ] - VERBOSE: Importing function 'Get-OSArchitectureWidth'.
+2019-03-12 13:12:19,964 1336 [INFO ] - VERBOSE: Importing function 'Get-PackageParameters'.
+2019-03-12 13:12:19,978 1336 [INFO ] - VERBOSE: Importing function 'Get-PackageParametersBuiltIn'.
+2019-03-12 13:12:19,978 1336 [INFO ] - VERBOSE: Importing function 'Get-ToolsLocation'.
+2019-03-12 13:12:19,978 1336 [INFO ] - VERBOSE: Importing function 'Get-UACEnabled'.
+2019-03-12 13:12:19,978 1336 [INFO ] - VERBOSE: Importing function 'Get-UninstallRegistryKey'.
+2019-03-12 13:12:19,992 1336 [INFO ] - VERBOSE: Importing function 'Get-VirusCheckValid'.
+2019-03-12 13:12:19,992 1336 [INFO ] - VERBOSE: Importing function 'Get-WebFile'.
+2019-03-12 13:12:19,992 1336 [INFO ] - VERBOSE: Importing function 'Get-WebFileName'.
+2019-03-12 13:12:20,006 1336 [INFO ] - VERBOSE: Importing function 'Get-WebHeaders'.
+2019-03-12 13:12:20,006 1336 [INFO ] - VERBOSE: Importing function 'Install-BinFile'.
+2019-03-12 13:12:20,006 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyDesktopLink'.
+2019-03-12 13:12:20,019 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:20,019 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-12 13:12:20,019 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyFileAssociation'.
+2019-03-12 13:12:20,019 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyInstallPackage'.
+2019-03-12 13:12:20,033 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPackage'.
+2019-03-12 13:12:20,033 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPath'.
+2019-03-12 13:12:20,033 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-12 13:12:20,047 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPowershellCommand'.
+2019-03-12 13:12:20,047 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyShortcut'.
+2019-03-12 13:12:20,047 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyVsixPackage'.
+2019-03-12 13:12:20,047 1336 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyZipPackage'.
+2019-03-12 13:12:20,061 1336 [INFO ] - VERBOSE: Importing function 'Install-Vsix'.
+2019-03-12 13:12:20,061 1336 [INFO ] - VERBOSE: Importing function 'Set-EnvironmentVariable'.
+2019-03-12 13:12:20,061 1336 [INFO ] - VERBOSE: Importing function 'Set-PowerShellExitCode'.
+2019-03-12 13:12:20,075 1336 [INFO ] - VERBOSE: Importing function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-12 13:12:20,075 1336 [INFO ] - VERBOSE: Importing function 'Test-ProcessAdminRights'.
+2019-03-12 13:12:20,075 1336 [INFO ] - VERBOSE: Importing function 'Uninstall-BinFile'.
+2019-03-12 13:12:20,089 1336 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-12 13:12:20,089 1336 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyPackage'.
+2019-03-12 13:12:20,089 1336 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyZipPackage'.
+2019-03-12 13:12:20,103 1336 [INFO ] - VERBOSE: Importing function 'Update-SessionEnvironment'.
+2019-03-12 13:12:20,103 1336 [INFO ] - VERBOSE: Importing function 'Write-ChocolateyFailure'.
+2019-03-12 13:12:20,103 1336 [INFO ] - VERBOSE: Importing function 'Write-ChocolateySuccess'.
+2019-03-12 13:12:20,117 1336 [INFO ] - VERBOSE: Importing function 'Write-FileUpdateLog'.
+2019-03-12 13:12:20,117 1336 [INFO ] - VERBOSE: Importing function 'Write-FunctionCallLogMessage'.
+2019-03-12 13:12:20,117 1336 [INFO ] - VERBOSE: Importing alias 'Add-BinFile'.
+2019-03-12 13:12:20,117 1336 [INFO ] - VERBOSE: Importing alias 'Generate-BinFile'.
+2019-03-12 13:12:20,131 1336 [INFO ] - VERBOSE: Importing alias 'Get-InstallRegistryKey'.
+2019-03-12 13:12:20,131 1336 [INFO ] - VERBOSE: Importing alias 'Get-OSBitness'.
+2019-03-12 13:12:20,131 1336 [INFO ] - VERBOSE: Importing alias 'Get-ProcessorBits'.
+2019-03-12 13:12:20,145 1336 [INFO ] - VERBOSE: Importing alias 'Invoke-ChocolateyProcess'.
+2019-03-12 13:12:20,145 1336 [INFO ] - VERBOSE: Importing alias 'refreshenv'.
+2019-03-12 13:12:20,145 1336 [INFO ] - VERBOSE: Importing alias 'Remove-BinFile'.
+2019-03-12 13:12:20,159 1336 [INFO ] - VERBOSE: Importing alias 'Start-ChocolateyProcess'.
+2019-03-12 13:12:20,298 1336 [DEBUG] - Running 'ChocolateyScriptRunner' for splayer v3.7 with packageScript 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1', packageFolder:'C:\ProgramData\chocolatey\lib\splayer', installArguments: '', packageParameters: '',
+2019-03-12 13:12:20,326 1336 [DEBUG] - Running 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1'
+2019-03-12 13:12:20,493 1336 [DEBUG] - Running Install-ChocolateyPackage -validExitCodes '0' -packageName 'SPlayer' -fileType 'EXE' -silentArgs '/S' -url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' 
+2019-03-12 13:12:20,855 1336 [DEBUG] - Running Get-ChocolateyWebFile -packageName 'SPlayer' -fileFullPath 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\splayer\3.7\SPlayerInstall.EXE' -url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' -url64bit '' -checksum '' -checksumType '' -checksum64 '' -checksumType64 '' -options 'System.Collections.Hashtable' -getOriginalFileName 'True' 
+2019-03-12 13:12:20,897 1336 [DEBUG] - Running Get-ProcessorBits -compare '64' 
+2019-03-12 13:12:20,939 1336 [DEBUG] - CPU is 64 bit
+2019-03-12 13:12:21,077 1336 [DEBUG] - Running Get-WebHeaders -url 'https://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' -ErrorAction 'Stop' 
+2019-03-12 13:12:21,315 1336 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-12 13:12:21,328 1336 [DEBUG] - Request Headers:
+2019-03-12 13:12:21,370 1336 [DEBUG] -   'Accept':'*/*'
+2019-03-12 13:12:21,370 1336 [DEBUG] -   'User-Agent':'chocolatey command line'
+2019-03-12 13:12:44,569 1336 [DEBUG] - Url does not have HTTPS available
+2019-03-12 13:12:44,615 1336 [DEBUG] - Running Get-WebFileName -url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' -defaultName 'SPlayerInstall.EXE' 
+2019-03-12 13:13:06,527 1336 [DEBUG] - Url request/response failed - file name will be 'SPlayerInstall.EXE':  Exception calling "GetResponse" with "0" argument(s): "Unable to connect to the remote server"
+2019-03-12 13:13:06,542 1336 [DEBUG] - Running Get-WebHeaders -url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' -ErrorAction 'Stop' 
+2019-03-12 13:13:06,558 1336 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-12 13:13:06,558 1336 [DEBUG] - Request Headers:
+2019-03-12 13:13:06,558 1336 [DEBUG] -   'Accept':'*/*'
+2019-03-12 13:13:06,558 1336 [DEBUG] -   'User-Agent':'chocolatey command line'
+2019-03-12 13:13:28,699 1336 [INFO ] - Attempt to get headers for http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437 failed.
+  The remote file either doesn't exist, is unauthorized, or is forbidden for url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437'. Exception calling "GetResponse" with "0" argument(s): "Unable to connect to the remote server"
+2019-03-12 13:13:28,699 1336 [INFO ] - 
+2019-03-12 13:13:28,714 1336 [INFO ] - Downloading SPlayer 
+  from 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437'
+2019-03-12 13:13:28,730 1336 [INFO ] - 
+2019-03-12 13:13:28,761 1336 [DEBUG] - Running Get-WebFile -url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437' -fileName 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\splayer\3.7\SPlayerInstall.EXE' -options 'System.Collections.Hashtable' 
+2019-03-12 13:13:28,777 1336 [DEBUG] - Setting request timeout to  30000
+2019-03-12 13:13:28,777 1336 [DEBUG] - Setting read/write timeout to  2700000
+2019-03-12 13:13:28,777 1336 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-12 13:13:52,105 1336 [ERROR] - ERROR: The remote file either doesn't exist, is unauthorized, or is forbidden for url 'http://file0.splayer.org/avant/SPlayerSetupInt.exe?2437'. Exception calling "GetResponse" with "0" argument(s): "Unable to connect to the remote server"
+ at Get-WebFile, C:\ProgramData\chocolatey\helpers\functions\Get-WebFile.ps1: line 331
+at Get-ChocolateyWebFile, C:\ProgramData\chocolatey\helpers\functions\Get-ChocolateyWebFile.ps1: line 345
+at Install-ChocolateyPackage, C:\ProgramData\chocolatey\helpers\functions\Install-ChocolateyPackage.ps1: line 396
+at <ScriptBlock>, C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1: line 7
+at <ScriptBlock>, C:\ProgramData\chocolatey\helpers\chocolateyScriptRunner.ps1: line 48
+at <ScriptBlock>, <No file>: line 1
+2019-03-12 13:13:52,121 1336 [DEBUG] - Built-in PowerShell host called with ['[System.Threading.Thread]::CurrentThread.CurrentCulture = '';[System.Threading.Thread]::CurrentThread.CurrentUICulture = ''; & import-module -name 'C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1'; & 'C:\ProgramData\chocolatey\helpers\chocolateyScriptRunner.ps1' -packageScript 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1' -installArguments '' -packageParameters '''] exited with '404'.
+2019-03-12 13:13:52,136 1336 [DEBUG] - Calling command ['"C:\Windows\System32\shutdown.exe" /a']
+2019-03-12 13:13:52,183 1336 [DEBUG] - Command ['"C:\Windows\System32\shutdown.exe" /a'] exited with '1116'
+2019-03-12 13:13:52,449 1336 [DEBUG] - Capturing package files in 'C:\ProgramData\chocolatey\lib\splayer'
+2019-03-12 13:13:52,449 1336 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1'
+  with checksum 'FB5BEE8220C2B23340BA166F470BC082'
+2019-03-12 13:13:52,449 1336 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\splayer\desktop.ini'
+  with checksum '9E36CC3537EE9EE1E3B10FA4E761045B'
+2019-03-12 13:13:52,464 1336 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\splayer\splayer.nupkg'
+  with checksum '0C6899A9308A1238750045856C2E5D78'
+2019-03-12 13:13:52,464 1336 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\splayer\splayer.nuspec'
+  with checksum '339DCFFEB822B29E57D9E80DAB409CC7'
+2019-03-12 13:13:52,464 1336 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\splayer\Thumbs.db'
+  with checksum 'B10771255FDB806F73C4C0C7DAEEB80C'
+2019-03-12 13:13:52,527 1336 [DEBUG] - Adding 'Hidden' attribute(s) to 'C:\ProgramData\chocolatey\.chocolatey'.
+2019-03-12 13:13:52,542 1336 [DEBUG] - Attempting to create directory "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7".
+2019-03-12 13:13:52,589 1336 [DEBUG] - There was no original file at 'C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.files'
+2019-03-12 13:13:52,589 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.arguments".
+2019-03-12 13:13:52,589 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.extra".
+2019-03-12 13:13:52,605 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.version".
+2019-03-12 13:13:52,605 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.sxs".
+2019-03-12 13:13:52,605 1336 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\splayer.3.7\.pin".
+2019-03-12 13:13:52,620 1336 [DEBUG] - Sending message 'HandlePackageResultCompletedMessage' out if there are subscribers...
+2019-03-12 13:13:52,620 1336 [ERROR] - The install of splayer was NOT successful.
+2019-03-12 13:13:52,636 1336 [ERROR] - Error while running 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1'.
+ See log for details.
+2019-03-12 13:13:52,653 1336 [DEBUG] - Attempting to create directory "C:\ProgramData\chocolatey\lib-bad".
+2019-03-12 13:13:52,667 1336 [DEBUG] - Moving 'C:\ProgramData\chocolatey\lib\splayer'
+ to 'C:\ProgramData\chocolatey\lib-bad\splayer'
+2019-03-12 13:13:54,683 1336 [DEBUG] - Attempting to delete file "C:\Users\Administrator\AppData\Local\NuGet\Cache\splayer.3.7.nupkg".
+2019-03-12 13:13:54,792 1336 [WARN ] - 
+Chocolatey installed 0/1 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+2019-03-12 13:13:54,792 1336 [INFO ] - 
+2019-03-12 13:13:54,808 1336 [ERROR] - Failures
+2019-03-12 13:13:54,808 1336 [ERROR] -  - splayer (exited 404) - Error while running 'C:\ProgramData\chocolatey\lib\splayer\chocolateyInstall.ps1'.
+ See log for details.
+2019-03-12 13:13:54,824 1336 [DEBUG] - Sending message 'PostRunMessage' out if there are subscribers...
+2019-03-12 13:13:54,902 1336 [DEBUG] - Exiting with 404
+ 477447 revised this gist on 12 Mar 2019.
+ 1 changed file with 149 additions and 0 deletions.
+ 149  gistfile21.txt 
+@@ -0,0 +1,149 @@
+tmux shortcuts & cheatsheet
+start new:
+
+tmux
+start new with session name:
+
+tmux new -s myname
+attach:
+
+tmux a  #  (or at, or attach)
+attach to named:
+
+tmux a -t myname
+list sessions:
+
+tmux ls
+kill session:
+
+tmux kill-session -t myname
+Kill all the tmux sessions:
+
+tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:
+
+Sessions
+:new<CR>  new session
+s  list sessions
+$  name session
+Windows (tabs)
+c  create window
+w  list windows
+n  next window
+p  previous window
+f  find window
+,  name window
+&  kill window
+Panes (splits)
+%  vertical split
+"  horizontal split
+
+o  swap panes
+q  show pane numbers
+x  kill pane
++  break pane into window (e.g. to select text by mouse to copy)
+-  restore pane from window
+⍽  space - toggle between layouts
+<prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
+<prefix> { (Move the current pane left)
+<prefix> } (Move the current pane right)
+<prefix> z toggle pane zoom
+Sync Panes
+You can do this by switching to the appropriate window, typing your Tmux prefix (commonly Ctrl-B or Ctrl-A) and then a colon to bring up a Tmux command line, and typing:
+
+:setw synchronize-panes
+You can optionally add on or off to specify which state you want; otherwise the option is simply toggled. This option is specific to one window, so it won’t change the way your other sessions or windows operate. When you’re done, toggle it off again by repeating the command. tip source
+
+Resizing Panes
+You can also resize panes if you don’t like the layout defaults. I personally rarely need to do this, though it’s handy to know how. Here is the basic syntax to resize panes:
+
+PREFIX : resize-pane -D (Resizes the current pane down)
+PREFIX : resize-pane -U (Resizes the current pane upward)
+PREFIX : resize-pane -L (Resizes the current pane left)
+PREFIX : resize-pane -R (Resizes the current pane right)
+PREFIX : resize-pane -D 20 (Resizes the current pane down by 20 cells)
+PREFIX : resize-pane -U 20 (Resizes the current pane upward by 20 cells)
+PREFIX : resize-pane -L 20 (Resizes the current pane left by 20 cells)
+PREFIX : resize-pane -R 20 (Resizes the current pane right by 20 cells)
+PREFIX : resize-pane -t 2 20 (Resizes the pane with the id of 2 down by 20 cells)
+PREFIX : resize-pane -t -L 20 (Resizes the pane with the id of 2 left by 20 cells)
+Copy mode:
+Pressing PREFIX [ places us in Copy mode. We can then use our movement keys to move our cursor around the screen. By default, the arrow keys work. we set our configuration file to use Vim keys for moving between windows and resizing panes so we wouldn’t have to take our hands off the home row. tmux has a vi mode for working with the buffer as well. To enable it, add this line to .tmux.conf:
+
+setw -g mode-keys vi
+With this option set, we can use h, j, k, and l to move around our buffer.
+
+To get out of Copy mode, we just press the ENTER key. Moving around one character at a time isn’t very efficient. Since we enabled vi mode, we can also use some other visible shortcuts to move around the buffer.
+
+For example, we can use "w" to jump to the next word and "b" to jump back one word. And we can use "f", followed by any character, to jump to that character on the same line, and "F" to jump backwards on the line.
+
+   Function                vi             emacs
+   Back to indentation     ^              M-m
+   Clear selection         Escape         C-g
+   Copy selection          Enter          M-w
+   Cursor down             j              Down
+   Cursor left             h              Left
+   Cursor right            l              Right
+   Cursor to bottom line   L
+   Cursor to middle line   M              M-r
+   Cursor to top line      H              M-R
+   Cursor up               k              Up
+   Delete entire line      d              C-u
+   Delete to end of line   D              C-k
+   End of line             $              C-e
+   Goto line               :              g
+   Half page down          C-d            M-Down
+   Half page up            C-u            M-Up
+   Next page               C-f            Page down
+   Next word               w              M-f
+   Paste buffer            p              C-y
+   Previous page           C-b            Page up
+   Previous word           b              M-b
+   Quit mode               q              Escape
+   Scroll down             C-Down or J    C-Down
+   Scroll up               C-Up or K      C-Up
+   Search again            n              n
+   Search backward         ?              C-r
+   Search forward          /              C-s
+   Start of line           0              C-a
+   Start selection         Space          C-Space
+   Transpose chars                        C-t
+Misc
+d  detach
+t  big clock
+?  list shortcuts
+:  prompt
+Configurations Options:
+# Mouse support - set to on if you want to use the mouse
+* setw -g mode-mouse off
+* set -g mouse-select-pane off
+* set -g mouse-resize-pane off
+* set -g mouse-select-window off
+
+# Set the default terminal mode to 256color mode
+set -g default-terminal "screen-256color"
+
+# enable activity alerts
+setw -g monitor-activity on
+set -g visual-activity on
+
+# Center the window list
+set -g status-justify centre
+
+# Maximize and restore a pane
+unbind Up bind Up new-window -d -n tmp \; swap-pane -s tmp.1 \; select-window -t tmp
+unbind Down
+bind Down last-window \; swap-pane -s tmp.1 \; kill-window -t tmp
+Resources:
+tmux: Productive Mouse-Free Development
+How to reorder windows
+Notes:
+Changelog:
+1411143833002 - Added toggle zoom under Panes (splits) section.
+1411143833002 - Added Sync Panes
+1414276652677 - Added Kill all tmux sessions
+1438585211173 - corrected create and add next and previus thanks to @justinjhendrick
+Request an Update:
+We Noticed that our Cheatsheet is growing and people are coloberating to add new tips and tricks, so please tweet to me what would you like to add and let's make it better!
+
+Twitter: @MohammedAlaa
+ 477447 revised this gist on 12 Mar 2019.
+ 1 changed file with 5177 additions and 0 deletions.
+ 5,177  gistfile20.txt 
+5,177 additions, 0 deletions not shown because the diff is too large. Please use a local Git client to view these changes.
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 31 additions and 0 deletions.
+ 31  gistfile19.txt 
+@@ -0,0 +1,31 @@
+{
+  "name": "template_version_1",
+  "version": "1.0.0",
+  "description": "OptimizedHTML - Start HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Morozov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-bower": "0.0.14",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp-zip": "^4.2.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {}
+}
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 168 additions and 0 deletions.
+ 168  gistfile18.txt 
+@@ -0,0 +1,168 @@
+diff --git a/groupBy.txt b/groupBy-without-fp.txt
+index 5b1b0b3b2..5b6220cdc 100644
+--- a/groupBy.txt
++++ b/groupBy-without-fp.txt
+@@ -12,8 +12,6 @@ node_modules/lodash/_Stack.js
+ node_modules/lodash/_Symbol.js
+ node_modules/lodash/_Uint8Array.js
+ node_modules/lodash/_WeakMap.js
+-node_modules/lodash/_addMapEntry.js
+-node_modules/lodash/_addSetEntry.js
+ node_modules/lodash/_apply.js
+ node_modules/lodash/_arrayAggregator.js
+ node_modules/lodash/_arrayEach.js
+@@ -23,7 +21,6 @@ node_modules/lodash/_arrayIncludesWith.js
+ node_modules/lodash/_arrayLikeKeys.js
+ node_modules/lodash/_arrayMap.js
+ node_modules/lodash/_arrayPush.js
+-node_modules/lodash/_arrayReduce.js
+ node_modules/lodash/_arraySome.js
+ node_modules/lodash/_assignValue.js
+ node_modules/lodash/_assocIndexOf.js
+@@ -69,7 +66,6 @@ node_modules/lodash/_basePropertyDeep.js
+ node_modules/lodash/_baseRange.js
+ node_modules/lodash/_baseRest.js
+ node_modules/lodash/_baseSet.js
+-node_modules/lodash/_baseSetData.js
+ node_modules/lodash/_baseSetToString.js
+ node_modules/lodash/_baseSome.js
+ node_modules/lodash/_baseSortBy.js
+@@ -87,38 +83,26 @@ node_modules/lodash/_castPath.js
+ node_modules/lodash/_cloneArrayBuffer.js
+ node_modules/lodash/_cloneBuffer.js
+ node_modules/lodash/_cloneDataView.js
+-node_modules/lodash/_cloneMap.js
+ node_modules/lodash/_cloneRegExp.js
+-node_modules/lodash/_cloneSet.js
+ node_modules/lodash/_cloneSymbol.js
+ node_modules/lodash/_cloneTypedArray.js
+ node_modules/lodash/_compareAscending.js
+ node_modules/lodash/_compareMultiple.js
+-node_modules/lodash/_composeArgs.js
+-node_modules/lodash/_composeArgsRight.js
+ node_modules/lodash/_copyArray.js
+ node_modules/lodash/_copyObject.js
+ node_modules/lodash/_copySymbols.js
+ node_modules/lodash/_copySymbolsIn.js
+ node_modules/lodash/_coreJsData.js
+-node_modules/lodash/_countHolders.js
+ node_modules/lodash/_createAggregator.js
+ node_modules/lodash/_createAssigner.js
+ node_modules/lodash/_createBaseEach.js
+ node_modules/lodash/_createBaseFor.js
+-node_modules/lodash/_createBind.js
+-node_modules/lodash/_createCtor.js
+-node_modules/lodash/_createCurry.js
+ node_modules/lodash/_createFind.js
+ node_modules/lodash/_createFlow.js
+-node_modules/lodash/_createHybrid.js
+ node_modules/lodash/_createInverter.js
+-node_modules/lodash/_createPartial.js
+ node_modules/lodash/_createRange.js
+-node_modules/lodash/_createRecurry.js
+ node_modules/lodash/_createSet.js
+ node_modules/lodash/_createToPairs.js
+-node_modules/lodash/_createWrap.js
+ node_modules/lodash/_defineProperty.js
+ node_modules/lodash/_equalArrays.js
+ node_modules/lodash/_equalByTag.js
+@@ -129,7 +113,6 @@ node_modules/lodash/_getAllKeys.js
+ node_modules/lodash/_getAllKeysIn.js
+ node_modules/lodash/_getData.js
+ node_modules/lodash/_getFuncName.js
+-node_modules/lodash/_getHolder.js
+ node_modules/lodash/_getMapData.js
+ node_modules/lodash/_getMatchData.js
+ node_modules/lodash/_getNative.js
+@@ -139,7 +122,6 @@ node_modules/lodash/_getSymbols.js
+ node_modules/lodash/_getSymbolsIn.js
+ node_modules/lodash/_getTag.js
+ node_modules/lodash/_getValue.js
+-node_modules/lodash/_getWrapDetails.js
+ node_modules/lodash/_hasPath.js
+ node_modules/lodash/_hashClear.js
+ node_modules/lodash/_hashDelete.js
+@@ -149,7 +131,6 @@ node_modules/lodash/_hashSet.js
+ node_modules/lodash/_initCloneArray.js
+ node_modules/lodash/_initCloneByTag.js
+ node_modules/lodash/_initCloneObject.js
+-node_modules/lodash/_insertWrapDetails.js
+ node_modules/lodash/_isFlattenable.js
+ node_modules/lodash/_isIndex.js
+ node_modules/lodash/_isIterateeCall.js
+@@ -172,7 +153,6 @@ node_modules/lodash/_mapCacheSet.js
+ node_modules/lodash/_mapToArray.js
+ node_modules/lodash/_matchesStrictComparable.js
+ node_modules/lodash/_memoizeCapped.js
+-node_modules/lodash/_mergeData.js
+ node_modules/lodash/_metaMap.js
+ node_modules/lodash/_nativeCreate.js
+ node_modules/lodash/_nativeKeys.js
+@@ -182,16 +162,12 @@ node_modules/lodash/_objectToString.js
+ node_modules/lodash/_overArg.js
+ node_modules/lodash/_overRest.js
+ node_modules/lodash/_realNames.js
+-node_modules/lodash/_reorder.js
+-node_modules/lodash/_replaceHolders.js
+ node_modules/lodash/_root.js
+ node_modules/lodash/_setCacheAdd.js
+ node_modules/lodash/_setCacheHas.js
+-node_modules/lodash/_setData.js
+ node_modules/lodash/_setToArray.js
+ node_modules/lodash/_setToPairs.js
+ node_modules/lodash/_setToString.js
+-node_modules/lodash/_setWrapToString.js
+ node_modules/lodash/_shortOut.js
+ node_modules/lodash/_stackClear.js
+ node_modules/lodash/_stackDelete.js
+@@ -202,13 +178,10 @@ node_modules/lodash/_strictIndexOf.js
+ node_modules/lodash/_stringToPath.js
+ node_modules/lodash/_toKey.js
+ node_modules/lodash/_toSource.js
+-node_modules/lodash/_updateWrapDetails.js
+ node_modules/lodash/_wrapperClone.js
+-node_modules/lodash/ary.js
+ node_modules/lodash/assign.js
+ node_modules/lodash/clone.js
+ node_modules/lodash/constant.js
+-node_modules/lodash/curry.js
+ node_modules/lodash/debounce.js
+ node_modules/lodash/defaults.js
+ node_modules/lodash/eq.js
+@@ -217,12 +190,6 @@ node_modules/lodash/findIndex.js
+ node_modules/lodash/flatten.js
+ node_modules/lodash/flow.js
+ node_modules/lodash/forOwn.js
+-node_modules/lodash/fp/_baseConvert.js
+-node_modules/lodash/fp/_mapping.js
+-node_modules/lodash/fp/_util.js
+-node_modules/lodash/fp/convert.js
+-node_modules/lodash/fp/groupBy.js
+-node_modules/lodash/fp/placeholder.js
+ node_modules/lodash/fromPairs.js
+ node_modules/lodash/get.js
+ node_modules/lodash/groupBy.js
+@@ -246,7 +213,6 @@ node_modules/lodash/isSet.js
+ node_modules/lodash/isString.js
+ node_modules/lodash/isSymbol.js
+ node_modules/lodash/isTypedArray.js
+-node_modules/lodash/iteratee.js
+ node_modules/lodash/keys.js
+ node_modules/lodash/keysIn.js
+ node_modules/lodash/last.js
+@@ -259,7 +225,6 @@ node_modules/lodash/pick.js
+ node_modules/lodash/pickBy.js
+ node_modules/lodash/property.js
+ node_modules/lodash/range.js
+-node_modules/lodash/rearg.js
+ node_modules/lodash/some.js
+ node_modules/lodash/sortedUniq.js
+ node_modules/lodash/stubArray.js
+@@ -270,7 +235,6 @@ node_modules/lodash/toFinite.js
+ node_modules/lodash/toInteger.js
+ node_modules/lodash/toNumber.js
+ node_modules/lodash/toPairs.js
+-node_modules/lodash/toPath.js
+ node_modules/lodash/toString.js
+ node_modules/lodash/uniq.js
+ node_modules/lodash/uniqBy.js
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 52 additions and 0 deletions.
+ 52  gistfile17.txt 
+@@ -0,0 +1,52 @@
+const companies= [
+  {name: "Company One", category: "Finance", start: 1981, end: 2004},
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+//foreach
+// companies.forEach((company) => {
+// 	console.log(company);
+// });
+//filter
+// const canDrink = ages.filter((age) => {
+// 	if (age >= 21){
+// 		return true;
+// 	}
+// });
+const canDrink = ages.filter(age => age >= 21);
+//filter retail company
+const retailCompanies = companies.filter(company => company.category == 'Retail');
+
+const eightiesCompanies = companies.filter(company => company.start >= 1980 && company.start < 1990);
+
+const stableCompanies = companies.filter(company => (company.end - company.start >= 10));
+// console.log(stableCompanies);
+//map
+//create array for company names
+const companyNames = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+
+//sort
+const sortedCompanies = companies.sort((a,b) => (a.start > b.start ? 1 : -1));
+const sortAges = ages.sort((a,b) => a - b);
+
+//reduce 
+const totalAges = ages.reduce((total,age) => total+=age,0);
+const totalYears = companies.reduce((total,company) => total+=(company.end - company.start), 0);
+// console.log(totalYears);
+
+const combined = ages
+  .map(age => age * 2)
+  .filter(age => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined);
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 7 additions and 0 deletions.
+ 7  gistfile16.txt 
+@@ -0,0 +1,7 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: fast
+provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-ssd
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 456 additions and 0 deletions.
+ 456  gistfile15.txt 
+@@ -0,0 +1,456 @@
+pygtk-all-in-one_win32_py2.7 v2.24.2.2014021601 - Failed - Package Test Results
+
+https://chocolatey.org/packages/pygtk-all-in-one_win32_py2.7/2.24.2.2014021601
+Tested 11 Mar 2019 11:31:37 +00:00
+Tested against win2012r2x64 (Windows Server 2012 R2 x64)
+Tested with the latest version of choco, possibly a beta version.
+Tested with chocolatey-package-verifier service v0.4.0-38-g3187e94
+Install failed. Note that the process may have hung, indicating a not completely silent install. This is usually seen when the last entry in the log is calling the install. This can also happen when a window pops up and needs to be closed to continue.
+ FilesSnapshot.xml
+<?xml version="1.0" encoding="utf-8"?>
+<fileSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <files>
+    <file path="C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\pygtk-all-in-one_win32_py2.7.nupkg" checksum="1AA96D85C92D2ECCAFC47644DA9A45E5" />
+    <file path="C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\pygtk-all-in-one_win32_py2.7.nuspec" checksum="FC0B96480E10C2CB0702D0D6BD09C296" />
+    <file path="C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1" checksum="9F5C1EE7F3A48EB74E3559FB9A8D6431" />
+  </files>
+</fileSnapshot>
+ Install.txt
+2019-03-11 10:46:01,859 2132 [DEBUG] - XmlConfiguration is now operational
+2019-03-11 10:46:02,046 2132 [INFO ] - ============================================================
+2019-03-11 10:46:02,829 2132 [INFO ] - Chocolatey v0.10.12-beta-3-gb65f586
+2019-03-11 10:46:02,891 2132 [DEBUG] - Chocolatey is running on Windows v 6.3.9600.0
+2019-03-11 10:46:02,891 2132 [DEBUG] - Attempting to delete file "C:/ProgramData/chocolatey/choco.exe.old".
+2019-03-11 10:46:02,906 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\choco.exe.old".
+2019-03-11 10:46:02,921 2132 [DEBUG] - Command line: "C:\ProgramData\chocolatey\choco.exe" install pygtk-all-in-one_win32_py2.7 --version 2.24.2.2014021601 -fdvy --execution-timeout=2700 --allow-downgrade
+2019-03-11 10:46:02,937 2132 [DEBUG] - Received arguments: install pygtk-all-in-one_win32_py2.7 --version 2.24.2.2014021601 -fdvy --execution-timeout=2700 --allow-downgrade
+2019-03-11 10:46:03,109 2132 [DEBUG] - RemovePendingPackagesTask is now ready and waiting for PreRunMessage.
+2019-03-11 10:46:03,125 2132 [DEBUG] - Sending message 'PreRunMessage' out if there are subscribers...
+2019-03-11 10:46:03,156 2132 [DEBUG] - [Pending] Removing all pending packages that should not be considered installed...
+2019-03-11 10:46:03,359 2132 [DEBUG] - The source 'https://chocolatey.org/api/v2/' evaluated to a 'normal' source type
+2019-03-11 10:46:03,375 2132 [DEBUG] - 
+NOTE: Hiding sensitive configuration data! Please double and triple 
+ check to be sure no sensitive data is shown, especially if copying 
+ output to a gist for review.
+2019-03-11 10:46:03,437 2132 [DEBUG] - Configuration: CommandName='install'|
+CacheLocation='C:\Users\Administrator\AppData\Local\Temp\chocolatey'|
+ContainsLegacyPackageInstalls='True'|
+CommandExecutionTimeoutSeconds='2700'|WebRequestTimeoutSeconds='30'|
+Sources='https://chocolatey.org/api/v2/'|SourceType='normal'|
+Debug='True'|Verbose='True'|Trace='False'|Force='True'|Noop='False'|
+HelpRequested='False'|UnsuccessfulParsing='False'|RegularOutput='True'|
+QuietOutput='False'|PromptForConfirmation='False'|AcceptLicense='True'|
+AllowUnofficialBuild='False'|Input='pygtk-all-in-one_win32_py2.7'|
+Version='2.24.2.2014021601'|AllVersions='False'|
+SkipPackageInstallProvider='False'|
+PackageNames='pygtk-all-in-one_win32_py2.7'|Prerelease='False'|
+ForceX86='False'|OverrideArguments='False'|NotSilent='False'|
+ApplyPackageParametersToDependencies='False'|
+ApplyInstallArgumentsToDependencies='False'|IgnoreDependencies='False'|
+AllowMultipleVersions='False'|AllowDowngrade='True'|
+ForceDependencies='False'|Information.PlatformType='Windows'|
+Information.PlatformVersion='6.3.9600.0'|
+Information.PlatformName='Windows Server 2012 R2'|
+Information.ChocolateyVersion='0.10.12.0'|
+Information.ChocolateyProductVersion='0.10.12-beta-3-gb65f586'|
+Information.FullName='choco, Version=0.10.12.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb'|
+
+Information.Is64BitOperatingSystem='True'|
+Information.Is64BitProcess='True'|Information.IsInteractive='True'|
+Information.UserName='vagrant'|
+Information.UserDomainName='WIN-E5K8TM30719'|
+Information.IsUserAdministrator='True'|
+Information.IsUserSystemAccount='False'|
+Information.IsUserRemoteDesktop='False'|
+Information.IsUserRemote='True'|
+Information.IsProcessElevated='True'|
+Information.IsLicensedVersion='False'|Information.LicenseType='Foss'|
+Features.AutoUninstaller='True'|Features.ChecksumFiles='True'|
+Features.AllowEmptyChecksums='False'|
+Features.AllowEmptyChecksumsSecure='True'|
+Features.FailOnAutoUninstaller='False'|
+Features.FailOnStandardError='False'|Features.UsePowerShellHost='True'|
+Features.LogEnvironmentValues='True'|Features.LogWithoutColor='False'|
+Features.VirusCheck='False'|
+Features.FailOnInvalidOrMissingLicense='False'|
+Features.IgnoreInvalidOptionsSwitches='True'|
+Features.UsePackageExitCodes='True'|
+Features.UseFipsCompliantChecksums='False'|
+Features.ShowNonElevatedWarnings='True'|
+Features.ShowDownloadProgress='False'|
+Features.StopOnFirstPackageFailure='False'|
+Features.UseRememberedArgumentsForUpgrades='False'|
+Features.IgnoreUnfoundPackagesOnUpgradeOutdated='False'|
+Features.RemovePackageInformationOnUninstall='False'|
+Features.ScriptsCheckLastExitCode='False'|
+ListCommand.LocalOnly='False'|
+ListCommand.IdOnly='False'|ListCommand.IncludeRegistryPrograms='False'|
+ListCommand.PageSize='25'|ListCommand.Exact='False'|
+ListCommand.ByIdOnly='False'|ListCommand.ByTagOnly='False'|
+ListCommand.IdStartsWith='False'|ListCommand.OrderByPopularity='False'|
+ListCommand.ApprovedOnly='False'|
+ListCommand.DownloadCacheAvailable='False'|
+ListCommand.NotBroken='False'|
+ListCommand.IncludeVersionOverrides='False'|
+UpgradeCommand.FailOnUnfound='False'|
+UpgradeCommand.FailOnNotInstalled='False'|
+UpgradeCommand.NotifyOnlyAvailableUpgrades='False'|
+UpgradeCommand.ExcludePrerelease='False'|
+NewCommand.AutomaticPackage='False'|
+NewCommand.UseOriginalTemplate='False'|SourceCommand.Command='unknown'|
+SourceCommand.Priority='0'|SourceCommand.BypassProxy='False'|
+SourceCommand.AllowSelfService='False'|
+SourceCommand.VisibleToAdminsOnly='False'|
+FeatureCommand.Command='unknown'|ConfigCommand.Command='unknown'|
+PinCommand.Command='unknown'|OutdatedCommand.IgnorePinned='False'|
+Proxy.BypassOnLocal='True'|
+2019-03-11 10:46:03,437 2132 [DEBUG] - _ Chocolatey:ChocolateyInstallCommand - Normal Run Mode _
+2019-03-11 10:46:03,469 2132 [INFO ] - Installing the following packages:
+2019-03-11 10:46:03,469 2132 [INFO ] - pygtk-all-in-one_win32_py2.7
+2019-03-11 10:46:03,484 2132 [INFO ] - By installing you accept licenses for the packages.
+2019-03-11 10:46:03,499 2132 [DEBUG] - Current environment values (may contain sensitive data):
+2019-03-11 10:46:03,499 2132 [DEBUG] -   * 'TMP'='C:\Users\Administrator\AppData\Local\Temp' ('User')
+2019-03-11 10:46:03,515 2132 [DEBUG] -   * 'TEMP'='C:\Users\Administrator\AppData\Local\Temp' ('User')
+2019-03-11 10:46:03,515 2132 [DEBUG] -   * 'ChocolateyLastPathUpdate'='Mon Mar 11 08:31:54 2019' ('User')
+2019-03-11 10:46:03,515 2132 [DEBUG] -   * 'FP_NO_HOST_CHECK'='NO' ('Machine')
+2019-03-11 10:46:03,515 2132 [DEBUG] -   * 'USERNAME'='SYSTEM' ('Machine')
+2019-03-11 10:46:03,531 2132 [DEBUG] -   * 'Path'='C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\ProgramData\chocolatey\bin;' ('Machine')
+2019-03-11 10:46:03,531 2132 [DEBUG] -   * 'ComSpec'='C:\Windows\system32\cmd.exe' ('Machine')
+2019-03-11 10:46:03,531 2132 [DEBUG] -   * 'TMP'='C:\Windows\TEMP' ('Machine')
+2019-03-11 10:46:03,531 2132 [DEBUG] -   * 'OS'='Windows_NT' ('Machine')
+2019-03-11 10:46:03,546 2132 [DEBUG] -   * 'windir'='C:\Windows' ('Machine')
+2019-03-11 10:46:03,546 2132 [DEBUG] -   * 'PROCESSOR_ARCHITECTURE'='AMD64' ('Machine')
+2019-03-11 10:46:03,546 2132 [DEBUG] -   * 'TEMP'='C:\Windows\TEMP' ('Machine')
+2019-03-11 10:46:03,546 2132 [DEBUG] -   * 'PATHEXT'='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC' ('Machine')
+2019-03-11 10:46:03,562 2132 [DEBUG] -   * 'PSModulePath'='C:\Windows\system32\WindowsPowerShell\v1.0\Modules\' ('Machine')
+2019-03-11 10:46:03,562 2132 [DEBUG] -   * 'NUMBER_OF_PROCESSORS'='4' ('Machine')
+2019-03-11 10:46:03,562 2132 [DEBUG] -   * 'PROCESSOR_LEVEL'='6' ('Machine')
+2019-03-11 10:46:03,562 2132 [DEBUG] -   * 'PROCESSOR_IDENTIFIER'='Intel64 Family 6 Model 45 Stepping 7, GenuineIntel' ('Machine')
+2019-03-11 10:46:03,562 2132 [DEBUG] -   * 'PROCESSOR_REVISION'='2d07' ('Machine')
+2019-03-11 10:46:03,578 2132 [DEBUG] -   * 'HOME'='C:\Users\Administrator' ('Machine')
+2019-03-11 10:46:03,578 2132 [DEBUG] -   * 'ChocolateyInstall'='C:\ProgramData\chocolatey' ('Machine')
+2019-03-11 10:46:07,312 2132 [INFO ] - [NuGet] Installing 'pygtk-all-in-one_win32_py2.7 2.24.2.2014021601'.
+2019-03-11 10:46:07,343 2132 [DEBUG] - [NuGet] Added file 'chocolateyInstall.ps1' to folder 'pygtk-all-in-one_win32_py2.7\tools'.
+2019-03-11 10:46:07,516 2132 [DEBUG] - [NuGet] Added file 'pygtk-all-in-one_win32_py2.7.nuspec' to folder 'pygtk-all-in-one_win32_py2.7'.
+2019-03-11 10:46:07,531 2132 [DEBUG] - [NuGet] Added file 'pygtk-all-in-one_win32_py2.7.nupkg' to folder 'pygtk-all-in-one_win32_py2.7'.
+2019-03-11 10:46:07,531 2132 [INFO ] - [NuGet] Successfully installed 'pygtk-all-in-one_win32_py2.7 2.24.2.2014021601'.
+2019-03-11 10:46:07,547 2132 [INFO ] - 
+pygtk-all-in-one_win32_py2.7 v2.24.2.2014021601 (forced) - Possibly broken
+2019-03-11 10:46:07,593 2132 [INFO ] - pygtk-all-in-one_win32_py2.7 package files install completed. Performing other installation steps.
+2019-03-11 10:46:07,781 2132 [DEBUG] - Setting installer args for pygtk-all-in-one_win32_py2.7
+2019-03-11 10:46:07,781 2132 [DEBUG] - Setting package parameters for pygtk-all-in-one_win32_py2.7
+2019-03-11 10:46:07,781 2132 [DEBUG] - Contents of 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1':
+2019-03-11 10:46:07,828 2132 [DEBUG] - #NOTE: Please remove any commented lines to tidy up prior to releasing the package, including this one
+
+$packageName = 'pygtk-all-in-one' # arbitrary name for the package, used in messages
+$installerType = 'msi' #only one of these: exe, msi, msu
+$url = 'http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' # download url
+$silentArgs = '' # "/s /S /q /Q /quiet /silent /SILENT /VERYSILENT" # try any of these to get the silent installer #msi is always /quiet
+$validExitCodes = @(0) #please insert other valid exit codes here, exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
+
+# main helpers - these have error handling tucked into them already
+# installer, will assert administrative rights
+# if removing $url64, please remove from here
+Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+# download and unpack a zip file
+# if removing $url64, please remove from here
+# Install-ChocolateyZipPackage "$packageName" "$url" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+#try { #error handling is only necessary if you need to do anything in addition to/instead of the main helpers
+  # other helpers - using any of these means you want to uncomment the error handling up top and at bottom.
+  # downloader that the main helpers use to download items
+  # if removing $url64, please remove from here
+  #Get-ChocolateyWebFile "$packageName" 'DOWNLOAD_TO_FILE_FULL_PATH' "$url" "$url64"
+  # installer, will assert administrative rights - used by Install-ChocolateyPackage
+  #Install-ChocolateyInstallPackage "$packageName" "$installerType" "$silentArgs" '_FULLFILEPATH_' -validExitCodes $validExitCodes
+  # unzips a file to the specified location - auto overwrites existing content
+  #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+  # Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
+  #Start-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell' -validExitCodes $validExitCodes
+  # add specific folders to the path - any executables found in the chocolatey package folder will already be on the path. This is used in addition to that or for cases when a native installer doesn't add things to the path.
+  #Install-ChocolateyPath 'LOCATION_TO_ADD_TO_PATH' 'User_OR_Machine' # Machine will assert administrative rights
+  # add specific files as shortcuts to the desktop
+  #$target = Join-Path $MyInvocation.MyCommand.Definition "$($packageName).exe"
+  #Install-ChocolateyDesktopLink $target
+
+  #------- ADDITIONAL SETUP -------#
+  # make sure to uncomment the error handling if you have additional setup to do
+
+  #$processor = Get-WmiObject Win32_Processor
+  #$is64bit = $processor.AddressWidth -eq 64
+
+
+  # the following is all part of error handling
+  #Write-ChocolateySuccess "$packageName"
+#} catch {
+  #Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
+  #throw
+#}
+
+2019-03-11 10:46:08,046 2132 [DEBUG] - Calling built-in PowerShell host with ['[System.Threading.Thread]::CurrentThread.CurrentCulture = '';[System.Threading.Thread]::CurrentThread.CurrentUICulture = ''; & import-module -name 'C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1'; & 'C:\ProgramData\chocolatey\helpers\chocolateyScriptRunner.ps1' -packageScript 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1' -installArguments '' -packageParameters ''']
+2019-03-11 10:46:08,062 2132 [DEBUG] - Redirecting System.Management.Automation.resources, Version=3.0.0.0, Culture=en-US, PublicKeyToken=31bf3856ad364e35, requested by ''
+2019-03-11 10:46:09,093 2132 [DEBUG] - Host version is 4.0, PowerShell Version is '4.0' and CLR Version is '4.0.30319.33440'.
+2019-03-11 10:46:09,468 2132 [INFO ] - VERBOSE: Exporting function 'Format-FileSize'.
+2019-03-11 10:46:09,468 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChecksumValid'.
+2019-03-11 10:46:09,468 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyUnzip'.
+2019-03-11 10:46:09,484 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyWebFile'.
+2019-03-11 10:46:09,484 2132 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariable'.
+2019-03-11 10:46:09,484 2132 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariableNames'.
+2019-03-11 10:46:09,484 2132 [INFO ] - VERBOSE: Exporting function 'Get-FtpFile'.
+2019-03-11 10:46:09,499 2132 [INFO ] - VERBOSE: Exporting function 'Get-OSArchitectureWidth'.
+2019-03-11 10:46:09,499 2132 [INFO ] - VERBOSE: Exporting function 'Get-PackageParameters'.
+2019-03-11 10:46:09,499 2132 [INFO ] - VERBOSE: Exporting function 'Get-PackageParametersBuiltIn'.
+2019-03-11 10:46:09,515 2132 [INFO ] - VERBOSE: Exporting function 'Get-ToolsLocation'.
+2019-03-11 10:46:09,515 2132 [INFO ] - VERBOSE: Exporting function 'Get-UACEnabled'.
+2019-03-11 10:46:09,515 2132 [INFO ] - VERBOSE: Exporting function 'Get-UninstallRegistryKey'.
+2019-03-11 10:46:09,515 2132 [INFO ] - VERBOSE: Exporting function 'Get-VirusCheckValid'.
+2019-03-11 10:46:09,531 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebFile'.
+2019-03-11 10:46:09,531 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebFileName'.
+2019-03-11 10:46:09,531 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebHeaders'.
+2019-03-11 10:46:09,546 2132 [INFO ] - VERBOSE: Exporting function 'Install-BinFile'.
+2019-03-11 10:46:09,546 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyDesktopLink'.
+2019-03-11 10:46:09,546 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:09,546 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-11 10:46:09,562 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyFileAssociation'.
+2019-03-11 10:46:09,562 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyInstallPackage'.
+2019-03-11 10:46:09,562 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPackage'.
+2019-03-11 10:46:09,562 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPath'.
+2019-03-11 10:46:09,578 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-11 10:46:09,578 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPowershellCommand'.
+2019-03-11 10:46:09,593 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyShortcut'.
+2019-03-11 10:46:09,593 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyVsixPackage'.
+2019-03-11 10:46:09,593 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyZipPackage'.
+2019-03-11 10:46:09,593 2132 [INFO ] - VERBOSE: Exporting function 'Install-Vsix'.
+2019-03-11 10:46:09,609 2132 [INFO ] - VERBOSE: Exporting function 'Set-EnvironmentVariable'.
+2019-03-11 10:46:09,609 2132 [INFO ] - VERBOSE: Exporting function 'Set-PowerShellExitCode'.
+2019-03-11 10:46:09,609 2132 [INFO ] - VERBOSE: Exporting function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-11 10:46:09,624 2132 [INFO ] - VERBOSE: Exporting function 'Test-ProcessAdminRights'.
+2019-03-11 10:46:09,624 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-BinFile'.
+2019-03-11 10:46:09,624 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:09,624 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyPackage'.
+2019-03-11 10:46:09,640 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyZipPackage'.
+2019-03-11 10:46:09,640 2132 [INFO ] - VERBOSE: Exporting function 'Update-SessionEnvironment'.
+2019-03-11 10:46:09,640 2132 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateyFailure'.
+2019-03-11 10:46:09,640 2132 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateySuccess'.
+2019-03-11 10:46:09,656 2132 [INFO ] - VERBOSE: Exporting function 'Write-FileUpdateLog'.
+2019-03-11 10:46:09,656 2132 [INFO ] - VERBOSE: Exporting function 'Write-FunctionCallLogMessage'.
+2019-03-11 10:46:09,656 2132 [INFO ] - VERBOSE: Exporting alias 'Get-ProcessorBits'.
+2019-03-11 10:46:09,671 2132 [INFO ] - VERBOSE: Exporting alias 'Get-OSBitness'.
+2019-03-11 10:46:09,671 2132 [INFO ] - VERBOSE: Exporting alias 'Get-InstallRegistryKey'.
+2019-03-11 10:46:09,671 2132 [INFO ] - VERBOSE: Exporting alias 'Generate-BinFile'.
+2019-03-11 10:46:09,671 2132 [INFO ] - VERBOSE: Exporting alias 'Add-BinFile'.
+2019-03-11 10:46:09,687 2132 [INFO ] - VERBOSE: Exporting alias 'Start-ChocolateyProcess'.
+2019-03-11 10:46:09,687 2132 [INFO ] - VERBOSE: Exporting alias 'Invoke-ChocolateyProcess'.
+2019-03-11 10:46:09,687 2132 [INFO ] - VERBOSE: Exporting alias 'Remove-BinFile'.
+2019-03-11 10:46:09,703 2132 [INFO ] - VERBOSE: Exporting alias 'refreshenv'.
+2019-03-11 10:46:09,718 2132 [INFO ] - VERBOSE: Exporting function 'Format-FileSize'.
+2019-03-11 10:46:09,718 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChecksumValid'.
+2019-03-11 10:46:09,718 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyUnzip'.
+2019-03-11 10:46:09,718 2132 [INFO ] - VERBOSE: Exporting function 'Get-ChocolateyWebFile'.
+2019-03-11 10:46:09,734 2132 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariable'.
+2019-03-11 10:46:09,734 2132 [INFO ] - VERBOSE: Exporting function 'Get-EnvironmentVariableNames'.
+2019-03-11 10:46:09,734 2132 [INFO ] - VERBOSE: Exporting function 'Get-FtpFile'.
+2019-03-11 10:46:09,749 2132 [INFO ] - VERBOSE: Exporting function 'Get-OSArchitectureWidth'.
+2019-03-11 10:46:09,749 2132 [INFO ] - VERBOSE: Exporting function 'Get-PackageParameters'.
+2019-03-11 10:46:09,749 2132 [INFO ] - VERBOSE: Exporting function 'Get-PackageParametersBuiltIn'.
+2019-03-11 10:46:09,749 2132 [INFO ] - VERBOSE: Exporting function 'Get-ToolsLocation'.
+2019-03-11 10:46:09,765 2132 [INFO ] - VERBOSE: Exporting function 'Get-UACEnabled'.
+2019-03-11 10:46:09,765 2132 [INFO ] - VERBOSE: Exporting function 'Get-UninstallRegistryKey'.
+2019-03-11 10:46:09,765 2132 [INFO ] - VERBOSE: Exporting function 'Get-VirusCheckValid'.
+2019-03-11 10:46:09,765 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebFile'.
+2019-03-11 10:46:09,781 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebFileName'.
+2019-03-11 10:46:09,781 2132 [INFO ] - VERBOSE: Exporting function 'Get-WebHeaders'.
+2019-03-11 10:46:09,781 2132 [INFO ] - VERBOSE: Exporting function 'Install-BinFile'.
+2019-03-11 10:46:09,796 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyDesktopLink'.
+2019-03-11 10:46:09,796 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:09,796 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-11 10:46:09,796 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyFileAssociation'.
+2019-03-11 10:46:09,812 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyInstallPackage'.
+2019-03-11 10:46:09,812 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPackage'.
+2019-03-11 10:46:09,812 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPath'.
+2019-03-11 10:46:09,828 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-11 10:46:09,828 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyPowershellCommand'.
+2019-03-11 10:46:09,828 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyShortcut'.
+2019-03-11 10:46:09,828 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyVsixPackage'.
+2019-03-11 10:46:09,843 2132 [INFO ] - VERBOSE: Exporting function 'Install-ChocolateyZipPackage'.
+2019-03-11 10:46:09,843 2132 [INFO ] - VERBOSE: Exporting function 'Install-Vsix'.
+2019-03-11 10:46:09,843 2132 [INFO ] - VERBOSE: Exporting function 'Set-EnvironmentVariable'.
+2019-03-11 10:46:09,843 2132 [INFO ] - VERBOSE: Exporting function 'Set-PowerShellExitCode'.
+2019-03-11 10:46:09,859 2132 [INFO ] - VERBOSE: Exporting function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-11 10:46:09,859 2132 [INFO ] - VERBOSE: Exporting function 'Test-ProcessAdminRights'.
+2019-03-11 10:46:09,859 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-BinFile'.
+2019-03-11 10:46:09,859 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:09,874 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyPackage'.
+2019-03-11 10:46:09,874 2132 [INFO ] - VERBOSE: Exporting function 'Uninstall-ChocolateyZipPackage'.
+2019-03-11 10:46:09,874 2132 [INFO ] - VERBOSE: Exporting function 'Update-SessionEnvironment'.
+2019-03-11 10:46:09,890 2132 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateyFailure'.
+2019-03-11 10:46:09,890 2132 [INFO ] - VERBOSE: Exporting function 'Write-ChocolateySuccess'.
+2019-03-11 10:46:09,890 2132 [INFO ] - VERBOSE: Exporting function 'Write-FileUpdateLog'.
+2019-03-11 10:46:09,890 2132 [INFO ] - VERBOSE: Exporting function 'Write-FunctionCallLogMessage'.
+2019-03-11 10:46:09,906 2132 [INFO ] - VERBOSE: Exporting alias 'Get-ProcessorBits'.
+2019-03-11 10:46:09,906 2132 [INFO ] - VERBOSE: Exporting alias 'Get-OSBitness'.
+2019-03-11 10:46:09,906 2132 [INFO ] - VERBOSE: Exporting alias 'Get-InstallRegistryKey'.
+2019-03-11 10:46:09,921 2132 [INFO ] - VERBOSE: Exporting alias 'Generate-BinFile'.
+2019-03-11 10:46:09,921 2132 [INFO ] - VERBOSE: Exporting alias 'Add-BinFile'.
+2019-03-11 10:46:09,921 2132 [INFO ] - VERBOSE: Exporting alias 'Start-ChocolateyProcess'.
+2019-03-11 10:46:09,921 2132 [INFO ] - VERBOSE: Exporting alias 'Invoke-ChocolateyProcess'.
+2019-03-11 10:46:09,937 2132 [INFO ] - VERBOSE: Exporting alias 'Remove-BinFile'.
+2019-03-11 10:46:09,937 2132 [INFO ] - VERBOSE: Exporting alias 'refreshenv'.
+2019-03-11 10:46:09,937 2132 [INFO ] - VERBOSE: Importing function 'Format-FileSize'.
+2019-03-11 10:46:09,953 2132 [INFO ] - VERBOSE: Importing function 'Get-ChecksumValid'.
+2019-03-11 10:46:09,953 2132 [INFO ] - VERBOSE: Importing function 'Get-ChocolateyUnzip'.
+2019-03-11 10:46:09,953 2132 [INFO ] - VERBOSE: Importing function 'Get-ChocolateyWebFile'.
+2019-03-11 10:46:09,953 2132 [INFO ] - VERBOSE: Importing function 'Get-EnvironmentVariable'.
+2019-03-11 10:46:09,968 2132 [INFO ] - VERBOSE: Importing function 'Get-EnvironmentVariableNames'.
+2019-03-11 10:46:09,968 2132 [INFO ] - VERBOSE: Importing function 'Get-FtpFile'.
+2019-03-11 10:46:09,968 2132 [INFO ] - VERBOSE: Importing function 'Get-OSArchitectureWidth'.
+2019-03-11 10:46:09,968 2132 [INFO ] - VERBOSE: Importing function 'Get-PackageParameters'.
+2019-03-11 10:46:09,984 2132 [INFO ] - VERBOSE: Importing function 'Get-PackageParametersBuiltIn'.
+2019-03-11 10:46:09,984 2132 [INFO ] - VERBOSE: Importing function 'Get-ToolsLocation'.
+2019-03-11 10:46:09,984 2132 [INFO ] - VERBOSE: Importing function 'Get-UACEnabled'.
+2019-03-11 10:46:09,999 2132 [INFO ] - VERBOSE: Importing function 'Get-UninstallRegistryKey'.
+2019-03-11 10:46:09,999 2132 [INFO ] - VERBOSE: Importing function 'Get-VirusCheckValid'.
+2019-03-11 10:46:09,999 2132 [INFO ] - VERBOSE: Importing function 'Get-WebFile'.
+2019-03-11 10:46:09,999 2132 [INFO ] - VERBOSE: Importing function 'Get-WebFileName'.
+2019-03-11 10:46:10,015 2132 [INFO ] - VERBOSE: Importing function 'Get-WebHeaders'.
+2019-03-11 10:46:10,015 2132 [INFO ] - VERBOSE: Importing function 'Install-BinFile'.
+2019-03-11 10:46:10,015 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyDesktopLink'.
+2019-03-11 10:46:10,015 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:10,031 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyExplorerMenuItem'.
+2019-03-11 10:46:10,031 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyFileAssociation'.
+2019-03-11 10:46:10,031 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyInstallPackage'.
+2019-03-11 10:46:10,046 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPackage'.
+2019-03-11 10:46:10,046 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPath'.
+2019-03-11 10:46:10,046 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPinnedTaskBarItem'.
+2019-03-11 10:46:10,046 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyPowershellCommand'.
+2019-03-11 10:46:10,062 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyShortcut'.
+2019-03-11 10:46:10,062 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyVsixPackage'.
+2019-03-11 10:46:10,062 2132 [INFO ] - VERBOSE: Importing function 'Install-ChocolateyZipPackage'.
+2019-03-11 10:46:10,062 2132 [INFO ] - VERBOSE: Importing function 'Install-Vsix'.
+2019-03-11 10:46:10,078 2132 [INFO ] - VERBOSE: Importing function 'Set-EnvironmentVariable'.
+2019-03-11 10:46:10,078 2132 [INFO ] - VERBOSE: Importing function 'Set-PowerShellExitCode'.
+2019-03-11 10:46:10,078 2132 [INFO ] - VERBOSE: Importing function 'Start-ChocolateyProcessAsAdmin'.
+2019-03-11 10:46:10,093 2132 [INFO ] - VERBOSE: Importing function 'Test-ProcessAdminRights'.
+2019-03-11 10:46:10,093 2132 [INFO ] - VERBOSE: Importing function 'Uninstall-BinFile'.
+2019-03-11 10:46:10,093 2132 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyEnvironmentVariable'.
+2019-03-11 10:46:10,093 2132 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyPackage'.
+2019-03-11 10:46:10,109 2132 [INFO ] - VERBOSE: Importing function 'Uninstall-ChocolateyZipPackage'.
+2019-03-11 10:46:10,109 2132 [INFO ] - VERBOSE: Importing function 'Update-SessionEnvironment'.
+2019-03-11 10:46:10,109 2132 [INFO ] - VERBOSE: Importing function 'Write-ChocolateyFailure'.
+2019-03-11 10:46:10,109 2132 [INFO ] - VERBOSE: Importing function 'Write-ChocolateySuccess'.
+2019-03-11 10:46:10,124 2132 [INFO ] - VERBOSE: Importing function 'Write-FileUpdateLog'.
+2019-03-11 10:46:10,124 2132 [INFO ] - VERBOSE: Importing function 'Write-FunctionCallLogMessage'.
+2019-03-11 10:46:10,124 2132 [INFO ] - VERBOSE: Importing alias 'Add-BinFile'.
+2019-03-11 10:46:10,140 2132 [INFO ] - VERBOSE: Importing alias 'Generate-BinFile'.
+2019-03-11 10:46:10,140 2132 [INFO ] - VERBOSE: Importing alias 'Get-InstallRegistryKey'.
+2019-03-11 10:46:10,140 2132 [INFO ] - VERBOSE: Importing alias 'Get-OSBitness'.
+2019-03-11 10:46:10,140 2132 [INFO ] - VERBOSE: Importing alias 'Get-ProcessorBits'.
+2019-03-11 10:46:10,156 2132 [INFO ] - VERBOSE: Importing alias 'Invoke-ChocolateyProcess'.
+2019-03-11 10:46:10,156 2132 [INFO ] - VERBOSE: Importing alias 'refreshenv'.
+2019-03-11 10:46:10,156 2132 [INFO ] - VERBOSE: Importing alias 'Remove-BinFile'.
+2019-03-11 10:46:10,156 2132 [INFO ] - VERBOSE: Importing alias 'Start-ChocolateyProcess'.
+2019-03-11 10:46:10,406 2132 [DEBUG] - Running 'ChocolateyScriptRunner' for pygtk-all-in-one_win32_py2.7 v2.24.2.2014021601 with packageScript 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1', packageFolder:'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7', installArguments: '', packageParameters: '',
+2019-03-11 10:46:10,453 2132 [DEBUG] - Running 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1'
+2019-03-11 10:46:10,657 2132 [DEBUG] - Running Install-ChocolateyPackage -validExitCodes '0' -packageName 'pygtk-all-in-one' -fileType 'msi' -silentArgs '' -url 'http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' 
+2019-03-11 10:46:10,796 2132 [DEBUG] - Running Get-ChocolateyWebFile -packageName 'pygtk-all-in-one' -fileFullPath 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-oneInstall.msi' -url 'http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' -url64bit '' -checksum '' -checksumType '' -checksum64 '' -checksumType64 '' -options 'System.Collections.Hashtable' -getOriginalFileName 'True' 
+2019-03-11 10:46:10,843 2132 [DEBUG] - Running Get-ProcessorBits -compare '64' 
+2019-03-11 10:46:10,890 2132 [DEBUG] - CPU is 64 bit
+2019-03-11 10:46:10,968 2132 [DEBUG] - Running Get-WebHeaders -url 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' -ErrorAction 'Stop' 
+2019-03-11 10:46:11,124 2132 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-11 10:46:11,140 2132 [DEBUG] - Request Headers:
+2019-03-11 10:46:11,171 2132 [DEBUG] -   'Accept':'*/*'
+2019-03-11 10:46:11,187 2132 [DEBUG] -   'User-Agent':'chocolatey command line'
+2019-03-11 10:46:13,328 2132 [DEBUG] - Response Headers:
+2019-03-11 10:46:13,359 2132 [DEBUG] -   'Keep-Alive':'timeout=10, max=1000'
+2019-03-11 10:46:13,359 2132 [DEBUG] -   'Connection':'Keep-Alive'
+2019-03-11 10:46:13,359 2132 [DEBUG] -   'Accept-Ranges':'bytes'
+2019-03-11 10:46:13,374 2132 [DEBUG] -   'Content-Length':'33239562'
+2019-03-11 10:46:13,374 2132 [DEBUG] -   'Content-Type':'application/octet-stream'
+2019-03-11 10:46:13,374 2132 [DEBUG] -   'Date':'Mon, 11 Mar 2019 10:46:13 GMT'
+2019-03-11 10:46:13,374 2132 [DEBUG] -   'Last-Modified':'Thu, 09 Feb 2012 20:48:11 GMT'
+2019-03-11 10:46:13,390 2132 [DEBUG] -   'Server':'Apache/2.4.37 (Unix)'
+2019-03-11 10:46:13,421 2132 [WARN ] - WARNING: Url has SSL/TLS available, switching to HTTPS for download
+2019-03-11 10:46:13,499 2132 [DEBUG] - Running Get-WebFileName -url 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' -defaultName 'pygtk-all-in-oneInstall.msi' 
+2019-03-11 10:46:14,437 2132 [DEBUG] - Using response url to determine file name. 'https://caesar.ftp.acc.umu.se/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi'
+2019-03-11 10:46:14,468 2132 [DEBUG] - File name determined from url is 'pygtk-all-in-one-2.24.2.win32-py2.7.msi'
+2019-03-11 10:46:14,484 2132 [DEBUG] - Running Get-WebHeaders -url 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' -ErrorAction 'Stop' 
+2019-03-11 10:46:14,484 2132 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-11 10:46:14,499 2132 [DEBUG] - Request Headers:
+2019-03-11 10:46:14,499 2132 [DEBUG] -   'Accept':'*/*'
+2019-03-11 10:46:14,499 2132 [DEBUG] -   'User-Agent':'chocolatey command line'
+2019-03-11 10:46:15,296 2132 [DEBUG] - Response Headers:
+2019-03-11 10:46:15,296 2132 [DEBUG] -   'Age':'2'
+2019-03-11 10:46:15,312 2132 [DEBUG] -   'Accept-Ranges':'bytes'
+2019-03-11 10:46:15,312 2132 [DEBUG] -   'Content-Length':'33239562'
+2019-03-11 10:46:15,312 2132 [DEBUG] -   'Content-Type':'application/octet-stream'
+2019-03-11 10:46:15,328 2132 [DEBUG] -   'Date':'Mon, 11 Mar 2019 10:46:15 GMT'
+2019-03-11 10:46:15,328 2132 [DEBUG] -   'Last-Modified':'Thu, 09 Feb 2012 20:48:11 GMT'
+2019-03-11 10:46:15,328 2132 [DEBUG] -   'Server':'Apache/2.4.37 (Unix)'
+2019-03-11 10:46:15,359 2132 [INFO ] - Downloading pygtk-all-in-one 
+  from 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi'
+2019-03-11 10:46:15,374 2132 [INFO ] - 
+2019-03-11 10:46:15,437 2132 [DEBUG] - Running Get-WebFile -url 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' -fileName 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi' -options 'System.Collections.Hashtable' 
+2019-03-11 10:46:15,453 2132 [DEBUG] - Setting request timeout to  30000
+2019-03-11 10:46:15,468 2132 [DEBUG] - Setting read/write timeout to  2700000
+2019-03-11 10:46:15,468 2132 [DEBUG] - Setting the UserAgent to 'chocolatey command line'
+2019-03-11 10:46:16,937 2132 [DEBUG] - Downloading https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi to C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi
+2019-03-11 10:46:34,922 2132 [INFO ] - 
+2019-03-11 10:46:34,922 2132 [INFO ] - Download of pygtk-all-in-one-2.24.2.win32-py2.7.msi (31.7 MB) completed.
+2019-03-11 10:46:34,922 2132 [INFO ] - 
+2019-03-11 10:46:38,140 2132 [DEBUG] - No runtime virus checking built into FOSS Chocolatey. Check out Pro/Business - https://chocolatey.org/compare
+2019-03-11 10:46:38,140 2132 [DEBUG] - Checking that 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi' is the size we expect it to be.
+2019-03-11 10:46:38,187 2132 [DEBUG] - Verifying package provided checksum of '' for 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi'.
+2019-03-11 10:46:38,218 2132 [DEBUG] - Running Get-ChecksumValid -file 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi' -checksum '' -checksumType '' -originalUrl 'https://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi' 
+2019-03-11 10:46:38,234 2132 [DEBUG] - Download from HTTPS source with feature 'allowEmptyChecksumsSecure' enabled.
+2019-03-11 10:46:38,312 2132 [DEBUG] - Running Install-ChocolateyInstallPackage -packageName 'pygtk-all-in-one' -fileType 'msi' -silentArgs '' -file 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi' -validExitCodes '0' -useOnlyPackageSilentArguments 'False' 
+2019-03-11 10:46:38,312 2132 [DEBUG] - Running Get-ProcessorBits -compare '32' 
+2019-03-11 10:46:38,328 2132 [INFO ] - Installing pygtk-all-in-one...
+2019-03-11 10:46:38,343 2132 [INFO ] - 
+2019-03-11 10:46:38,532 2132 [DEBUG] - Running Start-ChocolateyProcessAsAdmin -validExitCodes '0' -workingDirectory 'C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601' -statements '/i "C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi"  ' -exeToRun 'C:\Windows\System32\msiexec.exe' 
+2019-03-11 10:46:38,610 2132 [DEBUG] - Test-ProcessAdminRights: returning True
+2019-03-11 10:46:38,640 2132 [DEBUG] - Elevating permissions and running ["C:\Windows\System32\msiexec.exe" /i "C:\Users\Administrator\AppData\Local\Temp\chocolatey\pygtk-all-in-one_win32_py2.7\2.24.2.2014021601\pygtk-all-in-one-2.24.2.win32-py2.7.msi"  ]. This may take a while, depending on the statements.
+2019-03-11 11:31:07,902 2132 [WARN ] - Chocolatey timed out waiting for the command to finish. The timeout 
+ specified (or the default value) was '2700' seconds. Perhaps try a 
+ higher `--execution-timeout`? See `choco -h` for details.
+2019-03-11 11:31:07,917 2132 [DEBUG] - Calling command ['"C:\Windows\System32\shutdown.exe" /a']
+2019-03-11 11:31:07,980 2132 [DEBUG] - Command ['"C:\Windows\System32\shutdown.exe" /a'] exited with '1116'
+2019-03-11 11:31:08,277 2132 [DEBUG] - Capturing package files in 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7'
+2019-03-11 11:31:08,292 2132 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\pygtk-all-in-one_win32_py2.7.nupkg'
+  with checksum '1AA96D85C92D2ECCAFC47644DA9A45E5'
+2019-03-11 11:31:08,292 2132 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\pygtk-all-in-one_win32_py2.7.nuspec'
+  with checksum 'FC0B96480E10C2CB0702D0D6BD09C296'
+2019-03-11 11:31:08,308 2132 [DEBUG] -  Found 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1'
+  with checksum '9F5C1EE7F3A48EB74E3559FB9A8D6431'
+2019-03-11 11:31:08,355 2132 [DEBUG] - Adding 'Hidden' attribute(s) to 'C:\ProgramData\chocolatey\.chocolatey'.
+2019-03-11 11:31:08,387 2132 [DEBUG] - Attempting to create directory "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601".
+2019-03-11 11:31:08,433 2132 [DEBUG] - There was no original file at 'C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.files'
+2019-03-11 11:31:08,433 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.arguments".
+2019-03-11 11:31:08,449 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.extra".
+2019-03-11 11:31:08,449 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.version".
+2019-03-11 11:31:08,449 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.sxs".
+2019-03-11 11:31:08,449 2132 [DEBUG] - Attempting to delete file "C:\ProgramData\chocolatey\.chocolatey\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601\.pin".
+2019-03-11 11:31:08,464 2132 [DEBUG] - Sending message 'HandlePackageResultCompletedMessage' out if there are subscribers...
+2019-03-11 11:31:08,481 2132 [ERROR] - The install of pygtk-all-in-one_win32_py2.7 was NOT successful.
+2019-03-11 11:31:08,481 2132 [ERROR] - Error while running 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1'.
+ See log for details.
+2019-03-11 11:31:08,495 2132 [DEBUG] - Attempting to create directory "C:\ProgramData\chocolatey\lib-bad".
+2019-03-11 11:31:08,511 2132 [DEBUG] - Moving 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7'
+ to 'C:\ProgramData\chocolatey\lib-bad\pygtk-all-in-one_win32_py2.7'
+2019-03-11 11:31:10,527 2132 [DEBUG] - Attempting to delete file "C:\Users\Administrator\AppData\Local\NuGet\Cache\pygtk-all-in-one_win32_py2.7.2.24.2.2014021601.nupkg".
+2019-03-11 11:31:10,622 2132 [WARN ] - 
+Chocolatey installed 0/1 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+2019-03-11 11:31:10,622 2132 [INFO ] - 
+2019-03-11 11:31:10,636 2132 [ERROR] - Failures
+2019-03-11 11:31:10,636 2132 [ERROR] -  - pygtk-all-in-one_win32_py2.7 (exited -1) - Error while running 'C:\ProgramData\chocolatey\lib\pygtk-all-in-one_win32_py2.7\tools\chocolateyInstall.ps1'.
+ See log for details.
+2019-03-11 11:31:10,652 2132 [WARN ] - 
+Enjoy using Chocolatey? Explore more amazing features to take your
+experience to the next level at
+ https://chocolatey.org/compare
+2019-03-11 11:31:10,652 2132 [DEBUG] - Sending message 'PostRunMessage' out if there are subscribers...
+2019-03-11 11:31:10,699 2132 [DEBUG] - Exiting with -1
+ @477447
+
+
+
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 37 additions and 0 deletions.
+ 37  gistfile14.txt 
+@@ -0,0 +1,37 @@
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.Row
+import spark.implicits
+import org.apache.spark.sql.functions.udf
+
+//https://stackoverflow.com/questions/55083109/how-to-get-min-and-max-value-from-multiple-columns-in-a-dataframe-in-spark
+
+//Assumes the first column is not an integer, or rather is the index, but all other columns are integers.
+val df = Seq(
+    ("r0", 0, 2, 3),
+    ("r1", 1, 0, 0),
+    ("r2", 0, 2, 2)).toDF("id", "c0", "c1", "c2")
+
+//a function that combines values in all columns into a single String
+def concatFunc(row: Row) = row.mkString(",")
+def combineUdf = udf((row: Row) => concatFunc(row))
+
+//a function that pulls the string into an array, chops off the index/first columns
+//and return a two tuple of min and max.
+def mm(_s: String) =  {
+      (_s.split(",").drop(1).map{x => x.toInt}.reduceLeft(_ min  _),
+      _s.split(",").drop(1).map{x => x.toInt}.reduceLeft(_ max  _))
+  }
+val mmUdf = udf(mm(_: String))
+
+//Prep the dataframe
+val dfMinMax = df.
+ withColumn("concat", combineUdf(struct(df.columns.map(col): _*))).
+ withColumn("mm", mmUdf($"concat")).
+ withColumn("min", $"mm._1").
+ withColumn("max", $"mm._2")
+
+// you could leave it like this if you want...
+dfMinMax.show
+
+// or drop the working columns
+dfMinMax.drop("concat", "mm").show
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 4 additions and 0 deletions.
+ 4  gistfile13.txt 
+@@ -0,0 +1,4 @@
+#!/bin/bash
+CONNECT_HOST=$1
+openssl s_client -showcerts -connect $CONNECT_HOST:443 </dev/null | openssl x509 -outform PEM > server.cer
+security add-trusted-cert -d -r trustAsRoot -e hostnameMismatch -k /Library/Keychains/System.keychain server.cer
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 31 additions and 0 deletions.
+ 31  gistfile12.txt 
+@@ -0,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"github.com/gorilla/mux"
+	"net/http"
+
+)
+
+func signupHandler(w http.ResponseWriter, request *http.Request) {
+    fmt.Fprintf(w, "signup")
+}
+
+func play(route *mux.Route, router *mux.Router, ancestors []*mux.Route) error {
+	fmt.Println(route.GetName())
+	fmt.Println(route)
+	fmt.Println(router)
+	fmt.Println(ancestors)
+	return nil
+}
+
+func main() {
+	router := mux.NewRouter().StrictSlash(true)
+
+	router.HandleFunc("/control/dunno_flip/hola/hola", signupHandler)
+	router.HandleFunc("/control/db_stop/1/", signupHandler) 
+	router.HandleFunc("/control/db_close/", signupHandler) 
+	router.HandleFunc("/control/db_start/", signupHandler)
+	router.HandleFunc("/", signupHandler) 
+	router.Walk(play)
+}
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 24 additions and 0 deletions.
+ 24  gistfile11.txt 
+@@ -0,0 +1,24 @@
+public static void primenumber(int n){
+       int toplam1=2;
+        if(n>8) {
+            int toplam = 17;
+            for (int i = 3; i < n; i = i + 1) {
+                if (i >= 8) {
+                    if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
+
+                        toplam = toplam + i;
+                    }
+                }
+
+            }
+            System.out.println(toplam);
+
+        }else if(n<8){
+            for(int k=3;k<n;k=k+2){
+                toplam1=toplam1+k;
+            }
+        } System.out.println(toplam1);
+    }
+
+
+}
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 55 additions and 0 deletions.
+ 55  gistfile10.txt 
+@@ -0,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.eli.mvvm.User" />
+        <variable
+            name="handlers"
+            type="com.eli.mvvm.MyClickHandlers" />
+        <import type="com.eli.mvvm.util.BindingUtils" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin"
+        tools:context=".view.Main1Activity"
+        android:layout_marginTop="55dp"
+        tools:showIn="@layout/activity_main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{BindingUtils.capitalize(user.name)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.email}" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onButtonClick}"
+            android:text="CLICK" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> handlers.onButtonClickWithParam(v, user)}"
+            android:text="CLICK WITH PARAM" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LONG PRESS"
+            android:onLongClick="@{handlers::onButtonLongPressed}" />
+
+
+
+    </LinearLayout>
+</layout>
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 70 additions and 0 deletions.
+ 70  gistfile9.txt 
+@@ -0,0 +1,70 @@
+<form method="post" name="myform" id="myform">
+	<p>
+		<label for='items'>Number of Items: (min: 1)</label><br>
+		<input type="text" name="items" >
+	</p>
+	<p>
+		<label for='amount'>Amount: (min 10 max 100)</label><br>
+		<input type="text" name="amount" >
+	</p>
+  <p>
+		<label for='factor'>Factor: (Between 0.08 and 0.09)</label><br>
+		<input type="text" name="factor" >
+	</p>
+ <p>
+		<label for='dullness'>Dullness: (Between -9.5 and +11.1)</label><br>
+		<input type="text" name="dullness" >
+	</p>   
+
+	<input type="submit" name='submit' value="Submit">
+</form>
+ jquery-validation-numeric-range-check.markdown
+jQuery Validation - numeric range check
+Examples of max,min and range validations. Article here
+
+A Pen by Prasanth on CodePen.
+
+License.
+
+ script.js
+$(function()
+{
+    $("#myform").validate(
+      {
+        rules: 
+        {
+          items: 
+          {
+            required: true,
+            min:1
+          },
+          amount: 
+          {
+            range:[10,100]
+          },
+          factor:
+          {
+            required: true,
+            range:[0.08,0.09]  
+          },
+          dullness:
+          {
+            required: true,
+            range:[-9.5,11.1]
+          }
+        }
+      });	
+});
+ scripts
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+ style.css
+body
+{
+  font-family: Arial, Sans-serif;
+}
+.error
+{
+color:red;
+font-family:verdana, Helvetica;
+}
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 24 additions and 0 deletions.
+ 24  gistfile8.txt 
+@@ -0,0 +1,24 @@
+<?php
+// Only you need to add in your controller. 
+  public function bladeCompile($value, array $args = array())
+    {
+        $generated = \Blade::compileString($value);
+        ob_start() and extract($args, EXTR_SKIP);
+    // We'll include the view contents for parsing within a catcher
+    // so we can avoid any WSOD errors. If an exception occurs we
+    // will throw it out to the exception handler.
+        try
+        {
+            eval('?>'.$generated);
+        }
+    // If we caught an exception, we'll silently flush the output
+    // buffer so that no partially rendered views get thrown out
+    // to the client and confuse the user with junk.
+        catch (\Exception $e)
+        {
+            ob_get_clean(); throw $e;
+        }
+        $content = ob_get_clean();
+        return $content;
+    }   
+?>
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 100 additions and 0 deletions.
+ 100  gistfile7.txt 
+@@ -0,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>js-multi</title>
+    </head>
+    <body>
+      <div>Вёрстка сайта</div>
+      <div>
+        Баннер
+        <script id='p1_top' type='text/javascript'>(window.rttr1011 = window.rttr1011 || { queue: [] }).queue.push({
+  name: "p1",
+  selector: "p1_top",
+  template: "<a href='{%link%}' style='color: green' target='_blank' rel='nofollow'><img src='{%imgLink%}' /></a>",
+
+  settings: {
+    offers: [
+      {
+        priority: 3,
+        userAgent: {
+          exclude: [
+            "\\s+(YaBrowser|Yowser)/"
+          ],
+          include: [
+            "windows",
+            "mac"
+          ],
+        },
+        banners: [
+          {
+            link: "https://is.gd/h02yh1",
+            imgLink: "<!-- Вставьте сюда ссылку на баннер -->",
+            weight: 100
+          }
+        ],
+        geo: {
+          exclude: [
+            "UA"
+          ],
+          include: [
+            "CIS"
+          ],
+        },
+        weight: 100
+      }
+    ],
+    blockBannerRotation: true
+  },
+  fallback: function(){},
+});
+rttr1011.show && rttr1011.show();</script>
+      </div>
+
+
+      <div>Прочая вёрстка сайта</div>
+      <script src="./rttr1011.min.js" type="text/javascript"></script>
+    </body>
+    </html>
+ top.html
+<script id='p1_top' type='text/javascript'>(window.rttr1011 = window.rttr1011 || { queue: [] }).queue.push({
+  name: "p1",
+  selector: "p1_top",
+  template: "<a href='{%link%}' style='color: green' target='_blank' rel='nofollow'><img src='{%imgLink%}' /></a>",
+
+  settings: {
+    offers: [
+      {
+        priority: 3,
+        userAgent: {
+          exclude: [
+            "\\s+(YaBrowser|Yowser)/"
+          ],
+          include: [
+            "windows",
+            "mac"
+          ],
+        },
+        banners: [
+          {
+            link: "https://is.gd/h02yh1",
+            imgLink: "<!-- Вставьте сюда ссылку на баннер -->",
+            weight: 100
+          }
+        ],
+        geo: {
+          exclude: [
+            "UA"
+          ],
+          include: [
+            "CIS"
+          ],
+        },
+        weight: 100
+      }
+    ],
+    blockBannerRotation: true
+  },
+  fallback: function(){},
+});
+rttr1011.show && rttr1011.show();</script>
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 123 additions and 0 deletions.
+ 123  gistfile6.txt 
+@@ -0,0 +1,123 @@
+Whether you're trying to give back to the open source community or collaborating on your own projects, knowing how to properly fork and generate pull requests is essential. Unfortunately, it's quite easy to make mistakes or not know what you should do when you're initially learning the process. I know that I certainly had considerable initial trouble with it, and I found a lot of the information on GitHub and around the internet to be rather piecemeal and incomplete - part of the process described here, another there, common hangups in a different place, and so on.
+
+In an attempt to coallate this information for myself and others, this short tutorial is what I've found to be fairly standard procedure for creating a fork, doing your work, issuing a pull request, and merging that pull request back into the original project.
+
+Creating a Fork
+Just head over to the GitHub page and click the "Fork" button. It's just that simple. Once you've done that, you can use your favorite git client to clone your repo or just head straight to the command line:
+
+# Clone your fork to your local machine
+git clone git@github.com:USERNAME/FORKED-PROJECT.git
+Keeping Your Fork Up to Date
+While this isn't an absolutely necessary step, if you plan on doing anything more than just a tiny quick fix, you'll want to make sure you keep your fork up to date by tracking the original "upstream" repo that you forked. To do this, you'll need to add a remote:
+
+# Add 'upstream' repo to list of remotes
+git remote add upstream https://github.com/UPSTREAM-USER/ORIGINAL-PROJECT.git
+
+# Verify the new remote named 'upstream'
+git remote -v
+Whenever you want to update your fork with the latest upstream changes, you'll need to first fetch the upstream repo's branches and latest commits to bring them into your repository:
+
+# Fetch from upstream remote
+git fetch upstream
+
+# View all branches, including those from upstream
+git branch -va
+Now, checkout your own master branch and merge the upstream repo's master branch:
+
+# Checkout your master branch and merge upstream
+git checkout master
+git merge upstream/master
+If there are no unique commits on the local master branch, git will simply perform a fast-forward. However, if you have been making changes on master (in the vast majority of cases you probably shouldn't be - see the next section, you may have to deal with conflicts. When doing so, be careful to respect the changes made upstream.
+
+Now, your local master branch is up-to-date with everything modified upstream.
+
+Doing Your Work
+Create a Branch
+Whenever you begin work on a new feature or bugfix, it's important that you create a new branch. Not only is it proper git workflow, but it also keeps your changes organized and separated from the master branch so that you can easily submit and manage multiple pull requests for every task you complete.
+
+To create a new branch and start working on it:
+
+# Checkout the master branch - you want your new branch to come from master
+git checkout master
+
+# Create a new branch named newfeature (give your branch its own simple informative name)
+git branch newfeature
+
+# Switch to your new branch
+git checkout newfeature
+Now, go to town hacking away and making whatever changes you want to.
+
+Submitting a Pull Request
+Cleaning Up Your Work
+Prior to submitting your pull request, you might want to do a few things to clean up your branch and make it as simple as possible for the original repo's maintainer to test, accept, and merge your work.
+
+If any commits have been made to the upstream master branch, you should rebase your development branch so that merging it will be a simple fast-forward that won't require any conflict resolution work.
+
+# Fetch upstream master and merge with your repo's master branch
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+# If there were any new commits, rebase your development branch
+git checkout newfeature
+git rebase master
+Now, it may be desirable to squash some of your smaller commits down into a small number of larger more cohesive commits. You can do this with an interactive rebase:
+
+# Rebase all commits on your development branch
+git checkout 
+git rebase -i master
+This will open up a text editor where you can specify which commits to squash.
+
+Submitting
+Once you've committed and pushed all of your changes to GitHub, go to the page for your fork on GitHub, select your development branch, and click the pull request button. If you need to make any adjustments to your pull request, just push the updates to GitHub. Your pull request will automatically track the changes on your development branch and update.
+
+Accepting and Merging a Pull Request
+Take note that unlike the previous sections which were written from the perspective of someone that created a fork and generated a pull request, this section is written from the perspective of the original repository owner who is handling an incoming pull request. Thus, where the "forker" was referring to the original repository as upstream, we're now looking at it as the owner of that original repository and the standard origin remote.
+
+Checking Out and Testing Pull Requests
+Open up the .git/config file and add a new line under [remote "origin"]:
+
+fetch = +refs/pull/*/head:refs/pull/origin/*
+Now you can fetch and checkout any pull request so that you can test them:
+
+# Fetch all pull request branches
+git fetch origin
+
+# Checkout out a given pull request branch based on its number
+git checkout -b 999 pull/origin/999
+Keep in mind that these branches will be read only and you won't be able to push any changes.
+
+Automatically Merging a Pull Request
+In cases where the merge would be a simple fast-forward, you can automatically do the merge by just clicking the button on the pull request page on GitHub.
+
+Manually Merging a Pull Request
+To do the merge manually, you'll need to checkout the target branch in the source repo, pull directly from the fork, and then merge and push.
+
+# Checkout the branch you're merging to in the target repo
+git checkout master
+
+# Pull the development branch from the fork repo where the pull request development was done.
+git pull https://github.com/forkuser/forkedrepo.git newfeature
+
+# Merge the development branch
+git merge newfeature
+
+# Push master with the new feature merged into it
+git push origin master
+Now that you're done with the development branch, you're free to delete it.
+
+git branch -d newfeature
+Copyright
+
+Copyright 2017, Chase Pettit
+
+MIT License, http://www.opensource.org/licenses/mit-license.php
+
+Additional Reading
+
+Atlassian - Merging vs. Rebasing
+Sources
+
+GitHub - Fork a Repo
+GitHub - Syncing a Fork
+GitHub - Checking Out a Pull Request
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 108 additions and 0 deletions.
+ 108  gistfile5.txt 
+@@ -0,0 +1,108 @@
+ gistfile1.txt
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ar/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ar
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ast/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ast
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/bg/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/bg
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/br/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/br
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ca/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ca
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/cs/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/cs
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/da/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/da
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/de/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/de
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/el/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/el
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/en_GB/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/en_GB
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eo/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eo
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/es/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/es
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/es_419/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/es_419
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eu/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eu
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eu_ES/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/eu_ES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/fi/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/fi
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/fr/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/fr
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/gl/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/gl
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/hr/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/hr
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/hu/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/hu
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/id/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/id
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/it/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/it
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ja/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ja
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/kk/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/kk
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ko/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ko
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/lt/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/lt
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/nb/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/nb
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/nl/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/nl
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pl/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pl
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pt/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pt
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pt_BR/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/pt_BR
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ro/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ro
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ru/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/ru
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sk/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sk
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sl/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sl
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sr/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sr
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sr@latin/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sr@latin
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sv/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/sv
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/tr/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/tr
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/uk/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/uk
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/zh_CN/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/zh_CN
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/zh_TW/LC_MESSAGES
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale/zh_TW
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/locale
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/integrity
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/lint_config
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/lint_package
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/lint_pkgbuild
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/source
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/tidy
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg/util
+4.0K	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/zsh/site-functions
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/zsh
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/makepkg-template
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/libalpm/hooks
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/libalpm
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share/pacman
+4.0K	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/share
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/lib/pkgconfig
+256K	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/lib
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/include
+356K	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/bin
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/etc/bash_completion.d
+0	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3/etc
+616K	/nix/store/nifjii5nhvgnmdamp7636ll91shflx8b-pacman-5.1.3
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 68 additions and 0 deletions.
+ 68  gistfile4.txt 
+@@ -0,0 +1,68 @@
+CSS Media Queries for Desktop, Tablet, Mobile.
+ media-query.css
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  //CSS
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  //CSS
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  //CSS
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  //CSS
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  //CSS
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  //CSS
+
+}
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 196 additions and 0 deletions.
+ 196  gistfile3.txt 
+@@ -0,0 +1,196 @@
+#dnsmasq config, for a complete example, see:
+#  http://oss.segetech.com/intra/srv/dnsmasq.conf
+
+#log all dns queries
+log-queries
+
+#dont use host's hosts file
+no-hosts
+addn-hosts=./etc/hosts
+
+#dont use host's nameservers
+no-resolv
+servers-file=./etc/servers
+ util.sh
+#!/bin/bash -eux
+
+main(){
+    (
+        cd $(script_dir)
+        cmd="$1"
+        [[ $cmd == kill ]] && cmd="kill_dnsmasq"
+        shift
+        $cmd "$@"
+    )
+}
+
+update_hosts(){
+    mkdir -p etc
+    (
+        host_alias example.com dq1dnt4af4eyy.cloudfront.net
+    ) > etc/hosts
+}
+
+run(){
+    if [[ ${1:-} == "background" ]]; then
+        cmd=start_dnsmasq
+        shift
+    else
+        cmd=start_dnsmasq_foreground
+    fi
+    $cmd "$@"
+}
+
+kill_dnsmasq(){
+    stop_dnsmasq
+}
+
+start(){
+    update_hosts
+    update_servers
+    if [[ ${1:-} == "background" ]]; then
+        run "$@" &&
+            use_local_dns
+    else
+        use_local_dns
+        trap 'restore_dns' EXIT
+        run "$@"
+    fi
+}
+
+stop(){
+    kill
+    restore_dns
+}
+
+reload(){
+    reload_dnsmasq
+}
+
+#############################
+## Begin utility functions ##
+#############################
+
+ips_to_host(){
+    # for each line in stdin, format as an etc/hosts entry for arg1
+    # This simulates multiple A records
+    local host="$1"
+    awk -v host="$host" '{printf("%-16s %s\n",$0,host)}'
+}
+
+hostname_to_ips(){
+    local host="$1"
+    dig +short "$host"
+}
+
+host_alias(){
+    local src="$1"
+    local dst="$2"
+    hostname_to_ips $dst | ips_to_host $src
+}
+
+start_dnsmasq(){
+    sudo /usr/local/sbin/dnsmasq --conf-file=dnsmasq.conf --pid-file="$(get_pid_file)" "$@"
+}
+
+start_dnsmasq_foreground(){
+    # In dnsmasq -d is "no-daemon" mode which is backwards from many other apps
+    start_dnsmasq -d
+    # This is the production-ready way, but it doesn't respond to SIGINT
+    # start_dnsmasq --keep-in-foreground
+}
+
+signal_dnsmasq(){
+    local msg=""
+    if [[ -f $pid_file ]]; then
+        local pid="$(cat $pid_file)"
+        if ps -p $(cat $pid_file) >/dev/null; then
+            sudo /bin/kill "$@" $(cat $pid_file)
+        else
+            msg="The dnsmasq pid ($pid) is not running."
+        fi
+    else
+        msg="The dnsmasq pid file ($pid_file) is not present."
+    fi
+    if [[ -n $msg ]]; then
+        echo "$msg"
+        exit 255;
+    fi
+}
+
+stop_dnsmasq(){
+    signal_dnsmasq -TERM
+}
+
+reload_dnsmasq(){
+    signal_dnsmasq -HUP
+}
+
+get_networksetup_device(){
+    networksetup -listallnetworkservices | \
+        grep "$(
+            route get ${1:-8.8.8.8} | \
+                awk '$1=="interface:"{
+                         iface=$2
+                     }
+                     END{
+                         if(iface=="en0"){iface="Wi-Fi"}
+                         print iface
+                     }'
+        )"
+}
+
+uniq_ips(){
+    echo $(grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort | uniq)
+}
+
+set_dns(){
+    networksetup -setdnsservers $(get_networksetup_device) "$@"
+}
+
+clear_dns(){
+    set_dns Empty
+}
+
+current_resolv(){
+    grep nameserver /etc/resolv.conf
+}
+
+update_servers(){
+    local servers_file="$(get_servers_file)"
+    current_resolv | uniq_ips | for ip in $(cat); do echo "server=$ip"; done > $servers_file
+}
+
+use_local_dns(){
+    current_resolv | uniq_ips > etc/resolv.ips.bak
+    set_dns 127.0.0.1
+}
+
+restore_dns(){
+    clear_dns
+    current_resolv | uniq_ips > etc/resolv.ips.tmp
+    if ! diff etc/resolv.ips.{bak,tmp} >/dev/null; then
+        set_dns $(cat etc/resolv.ips.bak)
+    fi
+}
+
+get_pid_file(){
+    #bash -c "$(sed -n 's/pid-file/pid_file/; /pid_file/p;' < dnsmasq.conf);"' echo $pid_file'
+    echo "$PWD/etc/dnsmasq.pid"
+}
+
+get_servers_file(){
+    bash -c "$(sed -n 's/servers-file/servers_file/; /servers_file/p;' < dnsmasq.conf);"' echo $servers_file'
+}
+
+script_dir(){
+    echo "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+}
+
+################
+## Always run ##
+################
+
+pid_file="$(get_pid_file)"
+
+main "$@"
+ 477447 revised this gist on 11 Mar 2019.
+ 1 changed file with 8 additions and 0 deletions.
+ 8  gistfile2.txt 
+@@ -0,0 +1,8 @@
+class SuppressionSegmentationEventData
+{
+	int SegPk { get; set; }
+	string SegLibelle { get; set; }
+	string SegType { get; set; }
+	int? SegParentSegPk { get; set; }
+	int? SegPkRemplacement { get; set; }
+}
+ 477447 created this gist on 10 Mar 2019.
+ 16  gistfile1.txt 
+@@ -0,0 +1,16 @@
+# These functions create Actions, Events, and Parameters based the provided 
+# name and metadata.
+def create_local_event(name, metadata=None) 
+def create_local_action(name, handler, metadata=None) 
+def create_remote_action(name, metadata=None, suggestedNode=None, suggestedAction=None) 
+def create_remote_event(name, handler, metadata=None, suggestedNode=None, suggestedEvent=None) 
+def Parameter(schemaDictOrJSONorTitle = None) 
+
+# These functions look for existing Actions, Events, and Parameters based on a
+# string name. They return None if the Action/Event/Parameter could not be 
+# found.
+def lookup_local_action(name) 
+def lookup_local_event(name) 
+def lookup_remote_action(name) 
+def lookup_remote_event(name) 
+def lookup_parameter(name)
+
+
 
  
       
