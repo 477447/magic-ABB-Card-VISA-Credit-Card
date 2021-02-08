@@ -342,6 +342,9 @@ namespace ovlib
 
 #endif
 
+           - label=auto-merge
+    actions:
+      delete_head_branch: {}
       
       
 
