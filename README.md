@@ -31,5 +31,16 @@
      withdrew ]
                                     [ 2500.00 USD from my accounts We need to find a way to return this amount my account!
                                     
+                                    
+     [ received an
+      ABB Card VISA
+      credit card and
+      a bank employee
+      fraudulently
+      withdrew ]
+      
+                                          [ 2500.00 USD from my accounts We need to find a way to return this amount my account! ]
+                                          
+                                    
                                    
                                    
